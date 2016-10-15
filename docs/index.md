@@ -1,4 +1,5 @@
 # Visual Studio Time Savers
+
 Each one of this extension's features can be accessed via one or more of the following methods:
 - the *Time Savers* toolbar
 - the *Time Savers* main menu
@@ -39,6 +40,7 @@ whereas as others may only be available via some of them.
 ---
 
 #### Insert Guid(s)
+
 Insert a single guid, or multiple guids directly into your code without the use of any **external** tool.
 
 - insert **a single guid**, by simply moving the cursor to where you want to insert it and invoke the command
@@ -77,6 +79,7 @@ Insert a single guid, or multiple guids directly into your code without the use 
 ---
 
 #### Rebuild Solution
+
 A convenient way to rebuild the whole solution.
 
 ##### Without This Extension Installed
@@ -115,6 +118,7 @@ Once Visual Studio starts rebuilding the solution:
 ---
 
 #### Rebuild Project
+
 A convenient way to rebuild the just the current project
 (either a selected project, or the project to which the active code document belongs).
 
@@ -226,6 +230,7 @@ Or found myself looking up and down the menu trying to find it in the *Tools* me
 ---
 
 #### Restart Visual Studio
+
 Unlock Visual Studio's built-in ability to restart itself.
 
 Have you ever wished there was an **easy** way to restart Visual Studio,
