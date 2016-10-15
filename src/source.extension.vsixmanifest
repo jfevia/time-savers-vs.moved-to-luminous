@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="049c7ac5-ba44-4a72-b4ee-7be7fb1b0edd" Version="0.7.0" Language="en-US" Publisher="Yann Duran" />
+    <DisplayName>Visual Studio Time Savers</DisplayName>
+    <Description xml:space="preserve">A collection of essential productivity enhancements for day-to-day developing in Visual Studio.</Description>
+    <MoreInfo>https://visualstudiogallery.msdn.microsoft.com/049c7ac5-ba44-4a72-b4ee-7be7fb1b0edd</MoreInfo>
+    <License>Resources\LICENSE</License>
+    <GettingStartedGuide>https://yannduran.github.io/TimeSavers-vs/</GettingStartedGuide>
+    <ReleaseNotes>https://github.com/yannduran/TimeSavers-vs/blob/master/CHANGELOG.md</ReleaseNotes>
+    <Icon>Resources\package.ico</Icon>
+    <PreviewImage>Resources\preview.png</PreviewImage>
+    <Tags>&gt;visual studio, productivity enhancements, TimeSavers, yannduran, yd</Tags>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0]" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+    <Dependency Id="Microsoft.VisualStudio.MPF.14.0" DisplayName="Visual Studio MPF 14.0" d:Source="Installed" Version="[14.0]" />
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+  </Assets>
+</PackageManifest>
