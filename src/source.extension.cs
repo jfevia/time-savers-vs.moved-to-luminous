@@ -9,7 +9,7 @@ namespace TimeSavers.VS
     {
         public const string Id = "049c7ac5-ba44-4a72-b4ee-7be7fb1b0edd";
         public const string Name = "Visual Studio Time Savers";
-        public const string Description = @"A collection of essential productivity enhancements for day-to-day developing in Visual Studio.";
+        public const string Description = @"A collection of essential productivity enhancements for day-to-day developing in Visual Studio 2015.";
         public const string Language = "en-US";
         public const string Version = "0.7.0";
         public const string Author = "Yann Duran";
