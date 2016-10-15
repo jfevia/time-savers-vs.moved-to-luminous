@@ -13,6 +13,6 @@ namespace TimeSavers.VS
         public const string Language = "en-US";
         public const string Version = "1.0.2";
         public const string Author = "Yann Duran";
-        public const string Tags = ">visual studio, productivity enhancements, TimeSavers, yannduran, yd";
+        public const string Tags = "time savers, visual studio 2015, productivity, yannduran, yd";
     }
 }

@@ -10,7 +10,7 @@
     <ReleaseNotes>https://github.com/yannduran/time-savers-vs/blob/master/CHANGELOG.md</ReleaseNotes>
     <Icon>Resources\package.ico</Icon>
     <PreviewImage>Resources\preview.png</PreviewImage>
-    <Tags>&gt;visual studio, productivity enhancements, TimeSavers, yannduran, yd</Tags>
+    <Tags>time savers, visual studio 2015, productivity, yannduran, yd</Tags>
   </Metadata>
   <Installation>
     <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0]" />
