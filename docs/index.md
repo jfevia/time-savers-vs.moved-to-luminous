@@ -33,8 +33,8 @@ whereas as others may only be available via some of them.
   - Build Options
   - Developer Options
   - Visual Studio Options
-- Keyboard Options
 - Time Savers Options
+- Keyboard Options
 
 ---
 
