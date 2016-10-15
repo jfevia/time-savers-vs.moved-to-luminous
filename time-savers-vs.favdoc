@@ -7,12 +7,12 @@
       <favorites>
         <Favorite>
           <name>Repo</name>
-          <absolutePath>https://github.com/yannduran/essentials-vs</absolutePath>
+          <absolutePath>https://github.com/yannduran/time-savers-vs</absolutePath>
           <viewKind>External Document</viewKind>
         </Favorite>
         <Favorite>
           <name>Page</name>
-          <absolutePath>http://yannduran.github.io/essentials-vs</absolutePath>
+          <absolutePath>http://yannduran.github.io/time-savers-vs</absolutePath>
           <viewKind>External Document</viewKind>
         </Favorite>
       </favorites>
@@ -24,7 +24,7 @@
         <Favorite>
           <name>CHANGELOG</name>
           <path>CHANGELOG.md</path>
-          <absolutePath>D:\dev\yd\essentials\vs\CHANGELOG.md</absolutePath>
+          <absolutePath>D:\dev\yd\time-savers\vs\CHANGELOG.md</absolutePath>
           <position>
             <line>19</line>
             <column>45</column>
@@ -34,7 +34,7 @@
         <Favorite>
           <name>README</name>
           <path>README.md</path>
-          <absolutePath>D:\dev\yd\essentials\vs\README.md</absolutePath>
+          <absolutePath>D:\dev\yd\time-savers\vs\README.md</absolutePath>
           <position>
             <line>24</line>
             <column>1</column>
@@ -44,7 +44,7 @@
         <Favorite>
           <name>index.md</name>
           <path>docs\index.md</path>
-          <absolutePath>D:\dev\yd\essentials\vs\docs\index.md</absolutePath>
+          <absolutePath>D:\dev\yd\time-savers\vs\docs\index.md</absolutePath>
           <position>
             <line>1</line>
             <column>1</column>
@@ -54,7 +54,7 @@
         <Favorite>
           <name>appveyor.yml</name>
           <path>appveyor.yml</path>
-          <absolutePath>D:\dev\yd\essentials\vs\appveyor.yml</absolutePath>
+          <absolutePath>D:\dev\yd\time-savers\vs\appveyor.yml</absolutePath>
           <position>
             <line>5</line>
             <column>8</column>
@@ -70,7 +70,7 @@
         <Favorite>
           <name>Package.vsct</name>
           <path>src\Package.vsct</path>
-          <absolutePath>d:\dev\yd\essentials\vs\src\Package.vsct</absolutePath>
+          <absolutePath>d:\dev\yd\time-savers\vs\src\Package.vsct</absolutePath>
           <position>
             <line>66</line>
             <column>52</column>
@@ -80,7 +80,7 @@
         <Favorite>
           <name>Package.class</name>
           <path>src\Package.class.cs</path>
-          <absolutePath>d:\dev\yd\essentials\vs\src\Package.class.cs</absolutePath>
+          <absolutePath>d:\dev\yd\time-savers\vs\src\Package.class.cs</absolutePath>
           <position>
             <line>25</line>
             <column>13</column>
@@ -90,12 +90,12 @@
         <Favorite>
           <name>Package.const</name>
           <path>src\Package.const.cs</path>
-          <absolutePath>D:\dev\yd\essentials\vs\src\Package.const.cs</absolutePath>
+          <absolutePath>D:\dev\yd\time-savers\vs\src\Package.const.cs</absolutePath>
         </Favorite>
         <Favorite>
-          <name>vsixmanifest</name>
+          <name>VSIX Manifest</name>
           <path>src\source.extension.vsixmanifest</path>
-          <absolutePath>D:\dev\yd\essentials\vs\src\source.extension.vsixmanifest</absolutePath>
+          <absolutePath>D:\dev\yd\time-savers\vs\src\source.extension.vsixmanifest</absolutePath>
         </Favorite>
       </favorites>
     </Folder>
@@ -105,7 +105,7 @@
       <favorites>
         <Favorite>
           <name>Appveyor</name>
-          <absolutePath>https://ci.appveyor.com/project/YannDuran/essentials-vs</absolutePath>
+          <absolutePath>https://ci.appveyor.com/project/YannDuran/time-savers-vs</absolutePath>
           <viewKind>External Document</viewKind>
         </Favorite>
         <Favorite>
@@ -120,7 +120,7 @@
       <folders />
       <favorites>
         <Favorite>
-          <name>Gallery Page</name>
+          <name>VS Gallery</name>
           <absolutePath>https://visualstudiogallery.msdn.microsoft.com/049c7ac5-ba44-4a72-b4ee-7be7fb1b0edd</absolutePath>
           <viewKind>External Document</viewKind>
         </Favorite>

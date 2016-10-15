@@ -1,11 +1,11 @@
-# VS TimeSavers
+# VS Time Savers
 
-[![Build status](https://ci.appveyor.com/api/projects/status/la50f40vw7qys7b3?svg=true)](https://ci.appveyor.com/project/YannDuran/TimeSavers-vs)
+[![Build status](https://ci.appveyor.com/api/projects/status/la50f40vw7qys7b3?svg=true)](https://ci.appveyor.com/project/YannDuran/time-savers-vs)
 
 Download this extension from the [VS Gallery](https://visualstudiogallery.msdn.microsoft.com/049c7ac5-ba44-4a72-b4ee-7be7fb1b0edd)
 or get the [CI build](http://vsixgallery.com/extension/049c7ac5-ba44-4a72-b4ee-7be7fb1b0edd/).
 
-See the [changelog](https://github.com/yannduran/TimeSavers-vs/blob/master/CHANGELOG.md)
+See the [changelog](https://github.com/yannduran/time-savers-vs/blob/master/CHANGELOG.md)
 for changes and the roadmap for the future.
 
 ---
@@ -18,29 +18,29 @@ just let me know via the **Q&A** section.*
 
 ---
 
-### *VS TimeSavers* Toolbar
+### *Time Savers* Toolbar
 This extension adds a new toolbar.
 Because it's usually far easier to click a toolbar button than to have to go hunting for
 the command you want in a menu somewhere,
 the most convenient commands have been added to the toolbar.
 
 To make the toolbar visible, right-click in a blank spot on the toolbar area,
-and select *VS TimeSavers*.
+and select *Time Savers*.
 
 Like all other Visual Studio toolbars, you can remove any commands that you feel you don't need,
 or even add new commands to it.
 
-### *VS TimeSavers* Menu
+### *Time Savers* Menu
 For those people who prefer a menu to a toolbar this extension also adds a new menu to
 Visual Studio's main menu bar. All commands are available via this menu.
 
 ### Context Menus
 Most features are also available via another menu that's been added to the
 right-click context menu of any code window, and to some nodes in *Solution Explorer*.
-This allows you to access nearly all of the *VS TimeSavers* features
+This allows you to access nearly all of the *Time Savers* features
 without moving your mouse from the code you're working on.
 
-The commands have been grouped into their own *VS TimeSavers* menu because most context menus
+The commands have been grouped into their own *Time Savers* menu because most context menus
 are already pretty clogged up. And they're growing all the time,
 as Microsoft or 3rd-party extensions add more and more commands to them.
 
@@ -50,14 +50,14 @@ than having to search through one gigantic menu of different commands.
 
 ### Keyboard Shortcuts
 Some of the features that tend to be used frequently have also been assigned a keyboard shortcut.
-And of course you can add your own keyboard shortcut to any of the *VS TimeSavers* commands.
+And of course you can add your own keyboard shortcut to any of the **Time Savers* commands.
 
 ---
 
 ## Features
 
 A more in-depth description of the features listed below
-[can be found here](https://yannduran.github.io/TimeSavers-vs/),
+[can be found here](https://yannduran.github.io/time-savers-vs/),
 including a comparison of the steps required both with and without the extension installed,
 as well as images of the features in action.
 
@@ -187,8 +187,15 @@ toolbar | main menu | context menu
 :---:   | :---:     | :---:
 yes     | yes       | yes
 
-#### TimeSavers Options
-Open the *Tools* | *Options* dialog at the *TimeSavers* node.
+#### Time Savers Options
+Open the *Tools* | *Options* dialog at the *Time Savers* node.
+
+toolbar | main menu | context menu
+:---:   | :---:     | :---:
+yes     | yes       | yes
+
+#### Time Savers Options
+Open the *Tools* | *Options* dialog at the *Environment* | *Time Savers* node.
 
 toolbar | main menu | context menu
 :---:   | :---:     | :---:
@@ -202,7 +209,7 @@ toolbar | main menu | context menu
 yes     | yes       | yes
 
 ## Contribute
-Check out the [contribution guidelines](https://github.com/yannduran/TimeSavers-vs/blob/master/CONTRIBUTING.md)
+Check out the [contribution guidelines](https://github.com/yannduran/time-savers-vs/blob/master/CONTRIBUTING.md)
 if you want to contribute to this project.
 
 For cloning and building this project yourself, make sure to install the
