@@ -2,6 +2,7 @@
 using System.Runtime.InteropServices;
 using Microsoft.VisualStudio.Shell;
 
+//using static Microsoft.VisualStudio.Shell.Interop.SVsShell;
 using static Microsoft.VisualStudio.Shell.Interop.UIContextGuids80;
 
 namespace TimeSavers.VS
@@ -20,6 +21,8 @@ namespace TimeSavers.VS
     using static PackageConstants;
     using static PackageGuids;
     using static Vsix;
+    using Events;
+    using Microsoft.VisualStudio.Shell.Interop;
 
     [InstalledProductRegistration("110", "112", Version, IconResourceID = 400)]
     [Guid(PackageString)]
@@ -34,7 +37,17 @@ namespace TimeSavers.VS
 
     public sealed class PackageClass : PackageBase
     {
+        private BuildDialogPage _buildOptions;
+        private VisualStudioDialogPage _visualStudioOptions;
+
         //***
+
+        public BuildDialogPage BuildOptions
+            => _buildOptions ?? (_buildOptions = GetDialogPage(typeof(BuildDialogPage)) as BuildDialogPage);
+
+        public VisualStudioDialogPage VisualStudioOptions
+            => _visualStudioOptions ?? (_visualStudioOptions = GetDialogPage(typeof(VisualStudioDialogPage)) as VisualStudioDialogPage);
+
         //===M
 
         public PackageClass() : base(PackageCommandSet, Name, Description)
@@ -54,6 +67,8 @@ namespace TimeSavers.VS
             InstantiateOptionsCommands();
             InstantiateSolutionCommands();
             InstantiateProjectCommands();
+
+            AdviseSolutionEvents(new VsSolutionEvents(this));
         }
 
         //===
@@ -103,6 +118,15 @@ namespace TimeSavers.VS
         private void InstantiateInsertCommands()
         {
             InsertGuidCommand.Instantiate(this);
+        }
+
+        //TODO: move to framework
+        private void AdviseSolutionEvents(IVsSolutionEvents vsSolutionEvents)
+        {
+            uint solutionEventsCookie;
+            var vsSolution = GetGlobalService<SVsSolution, IVsSolution>();
+
+            vsSolution.AdviseSolutionEvents(vsSolutionEvents, out solutionEventsCookie);
         }
 
         //***
