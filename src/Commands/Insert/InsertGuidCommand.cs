@@ -1,14 +1,17 @@
-﻿using Microsoft.VisualStudio.Shell;
+﻿using Microsoft.VisualStudio;
+using Microsoft.VisualStudio.Shell;
+using Microsoft.VisualStudio.Shell.Interop;
 
 namespace TimeSavers.VS.Commands.Insert
 {
-    using Microsoft.VisualStudio.Shell.Interop;
     using YD.Framework.VisualStudio.Commands;
     using YD.Framework.VisualStudio.Packages;
+    using TimeSavers.VS.UI.ToolWindows.InsertGuid;
 
     internal sealed class InsertGuidCommand : DynamicCommand
     {
         //***
+
         //===M
 
         private InsertGuidCommand(PackageBase package) : base(package, PackageIds.InsertGuidCommand)
@@ -30,17 +33,17 @@ namespace TimeSavers.VS.Commands.Insert
 
         private CommandResult ExecuteCommand()
         {
-            //var window = Package?.FindToolWindow(typeof(UI.ToolWindows.InsertGuid.InsertGuidToolWindow), id: 0, create: true);
-            //if ((null == window) || (null == window.Frame))
-            //{
-            //    return new ProblemResult("Cannot create tool window");
-            //}
+            var window = Package?.FindToolWindow(typeof(InsertGuidToolWindow), id: 0, create: true);
+            if ((null == window) || (null == window.Frame))
+            {
+                return new ProblemResult("Cannot create tool window");
+            }
 
-            //var windowFrame = (IVsWindowFrame)window.Frame;
-            //if (Microsoft.VisualStudio.ErrorHandler.Failed(windowFrame.Show()))
-            //{
-            //    return new ProblemResult("Cannot show tool window");
-            //}
+            var windowFrame = (IVsWindowFrame)window.Frame;
+            if (ErrorHandler.Failed(windowFrame.Show()))
+            {
+                return new ProblemResult("Cannot show tool window");
+            }
 
             return new SuccessResult();
 

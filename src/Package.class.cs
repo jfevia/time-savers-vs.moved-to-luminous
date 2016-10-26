@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using Microsoft.VisualStudio.Shell;
+using Microsoft.VisualStudio.Shell.Interop;
 
 //using static Microsoft.VisualStudio.Shell.Interop.SVsShell;
 using static Microsoft.VisualStudio.Shell.Interop.UIContextGuids80;
@@ -17,18 +18,19 @@ namespace TimeSavers.VS
     using Commands.ProjectNode;
     using Commands.Developer;
     using Options;
+    using UI.ToolWindows.InsertGuid;
 
     using static PackageConstants;
     using static PackageGuids;
     using static Vsix;
     using Events;
-    using Microsoft.VisualStudio.Shell.Interop;
 
     [InstalledProductRegistration("110", "112", Version, IconResourceID = 400)]
     [Guid(PackageString)]
 
     [ProvideAutoLoad(NoSolution)]
     [ProvideAutoLoad(SolutionExists)]
+    [ProvideToolWindow(typeof(InsertGuidToolWindow))]
 
     [ProvideOptionPage(typeof(GeneralDialogPage), Name, General, 0, 0, !SupportsAutomation)]
     [ProvideOptionPage(typeof(BuildDialogPage), Name, Build, 0, 0, !SupportsAutomation)]
