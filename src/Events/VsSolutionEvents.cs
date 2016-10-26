@@ -1,15 +1,18 @@
 ﻿using EnvDTE;
+using EnvDTE80;
 using Microsoft.VisualStudio;
-using Microsoft.VisualStudio.Shell;
 using Microsoft.VisualStudio.Shell.Interop;
 
 namespace TimeSavers.VS.Events
 {
+    using YD.Framework.VisualStudio.Packages;
+
     public sealed class VsSolutionEvents : IVsSolutionEvents
     {
         int IVsSolutionEvents.OnAfterCloseSolution(object pUnkReserved)
         {
-            DTE dte = Package.GetGlobalService(typeof(DTE)) as DTE;
+            var dte = PackageBase.GetGlobalService<DTE, DTE2>();
+            //DTE dte = Package.GetGlobalService(typeof(DTE)) as DTE;
             if (dte != null)
                 dte.ExecuteCommand("View.StartPage");
 
