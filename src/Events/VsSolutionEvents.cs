@@ -9,12 +9,25 @@ namespace TimeSavers.VS.Events
 
     public sealed class VsSolutionEvents : IVsSolutionEvents
     {
+        private readonly bool _reopenStartPageEnabed;
+
+        //***
+
+        //===M
+
+        public VsSolutionEvents(PackageClass package)
+        {
+            _reopenStartPageEnabed = package.VisualStudioOptions.ReopenStartPageEnabled;
+        }
+
+        //===M
+
         int IVsSolutionEvents.OnAfterCloseSolution(object pUnkReserved)
         {
             var dte = PackageBase.GetGlobalService<DTE, DTE2>();
-            //DTE dte = Package.GetGlobalService(typeof(DTE)) as DTE;
-            if (dte != null)
-                dte.ExecuteCommand("View.StartPage");
+
+            if (_reopenStartPageEnabed)
+                dte?.ExecuteCommand("View.StartPage");
 
             return VSConstants.S_OK;
         }
@@ -63,5 +76,7 @@ namespace TimeSavers.VS.Events
         {
             return VSConstants.S_OK;
         }
+
+        //***
     }
 }

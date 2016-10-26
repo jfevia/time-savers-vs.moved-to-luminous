@@ -16,7 +16,7 @@ namespace TimeSavers.VS.Options
 
         [Category(H1 + VisualStudio + " " + Features)]
         [DisplayName(VisualStudio + " " + FeaturesEnabled)]
-        [Description("Rebuild Project, Rebuild Solution, Cancel Build")]
+        [Description("Activity Log, Diagnostice Log, Path Variables, Reopen Start Page")]
         public bool VisualStudioCommandsEnabled { get; set; } = true;
 
         //---
@@ -38,6 +38,12 @@ namespace TimeSavers.VS.Options
         [Description("")]
         [DefaultValue(true)]
         public bool PathVariablsCommandEnabled { get; set; } = true;
+
+        [Category(H2 + VisualStudio + " " + Commands)]
+        [DisplayName("Reopen Start Page Enabled")]
+        [Description("")]
+        [DefaultValue(true)]
+        public bool ReopenStartPageEnabled { get; set; } = true;
 
         //---
 
