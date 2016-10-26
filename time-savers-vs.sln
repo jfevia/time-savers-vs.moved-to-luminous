@@ -13,9 +13,14 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\..\Projects.txt = ..\..\Projects.txt
 		README.md = README.md
 		time-savers-vs.favdoc = time-savers-vs.favdoc
+		tests\TimeSavers.VS.Tests.csproj = tests\TimeSavers.VS.Tests.csproj
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeSavers.VS", "src\TimeSavers.VS.csproj", "{A2A22BAD-F136-4409-B37D-1E070E373E3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeSavers.VS.Tests", "tests\TimeSavers.VS.Tests.csproj", "{9810C7E4-7FEB-4BE1-8438-C5187683A61D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TimeSavers.VS.UI", "ui\TimeSavers.VS.UI.csproj", "{09FA1175-0897-457F-809D-F6CF072E51EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +32,14 @@ Global
 		{A2A22BAD-F136-4409-B37D-1E070E373E3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2A22BAD-F136-4409-B37D-1E070E373E3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2A22BAD-F136-4409-B37D-1E070E373E3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9810C7E4-7FEB-4BE1-8438-C5187683A61D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9810C7E4-7FEB-4BE1-8438-C5187683A61D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9810C7E4-7FEB-4BE1-8438-C5187683A61D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9810C7E4-7FEB-4BE1-8438-C5187683A61D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09FA1175-0897-457F-809D-F6CF072E51EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09FA1175-0897-457F-809D-F6CF072E51EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09FA1175-0897-457F-809D-F6CF072E51EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09FA1175-0897-457F-809D-F6CF072E51EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
