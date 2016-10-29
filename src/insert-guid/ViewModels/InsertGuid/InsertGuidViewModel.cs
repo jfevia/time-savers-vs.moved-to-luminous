@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TimeSavers.VS.UI.ViewModels.InsertGuid
+namespace TimeSavers.VS.InsertGuid.ViewModels
 {
     public class InsertGuidViewModel : ViewModelBase
     {

@@ -1,7 +1,4 @@
-﻿using System.Windows;
-using System.Windows.Controls;
-
-namespace TimeSavers.VS.UI
+﻿namespace TimeSavers.VS.InsertGuid
 {
     /// <summary>
     /// Follow steps 1a or 1b and then 2 to use this custom control in a XAML file.
@@ -32,9 +29,9 @@ namespace TimeSavers.VS.UI
     ///     <MyNamespace:CustomControl1/>
     ///
     /// </summary>
-    //public class CustomControl1 : Control
+    //public class CustomControlSteps : Control
     //{
-    //    static CustomControl1()
+    //    static CustomControlSteps()
     //    {
     //        DefaultStyleKeyProperty.OverrideMetadata(typeof(CustomControl1), new FrameworkPropertyMetadata(typeof(CustomControl1)));
     //    }

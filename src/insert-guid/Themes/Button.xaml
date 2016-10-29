@@ -1,8 +1,8 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="clr-namespace:TimeSavers.VS.UI.Themes"
-    xmlns:controls="clr-namespace:TimeSavers.VS.UI.Controls"
+    xmlns:local="clr-namespace:TimeSavers.VS.InsertGuid.Themes"
+    xmlns:controls="clr-namespace:TimeSavers.VS.InsertGuid.Controls"
     >
     <Style x:Key="InsertGuid.Button"
         TargetType="{x:Type Button}"

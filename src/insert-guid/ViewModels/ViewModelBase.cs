@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace TimeSavers.VS.UI.ViewModels
+namespace TimeSavers.VS.InsertGuid.ViewModels
 {
     public class ViewModelBase : INotifyPropertyChanged
     {

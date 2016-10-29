@@ -2,9 +2,9 @@
 using System.Runtime.InteropServices;
 using Microsoft.VisualStudio.Shell;
 
-namespace TimeSavers.VS.UI.ToolWindows.InsertGuid
+namespace TimeSavers.VS.InsertGuid.ToolWindows
 {
-    using Controls.InsertGuid;
+    using Controls;
 
     [Guid("776cdc3d-f8f4-4819-8141-cf5938c4cd7d")]
     public class InsertGuidToolWindow : ToolWindowPane

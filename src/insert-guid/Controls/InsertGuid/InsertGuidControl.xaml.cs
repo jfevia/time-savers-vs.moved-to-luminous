@@ -1,9 +1,9 @@
 ﻿using System.Windows.Controls;
 
-namespace TimeSavers.VS.UI.Controls.InsertGuid
+namespace TimeSavers.VS.InsertGuid.Controls
 {
-    using ToolWindows.InsertGuid;
-    using ViewModels.InsertGuid;
+    using ToolWindows;
+    using ViewModels;
 
     public partial class InsertGuidControl : UserControl
     {

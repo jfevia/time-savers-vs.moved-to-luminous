@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Windows.Data;
 using System.Windows.Markup;
 
-namespace TimeSavers.VS.UI.Converters
+namespace TimeSavers.VS.InsertGuid.Converters
 {
     public abstract class ConverterBase : MarkupExtension, IValueConverter
     {

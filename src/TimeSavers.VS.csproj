@@ -267,9 +267,9 @@
       <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3bSatelliteDllsProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
       <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
     </ProjectReference>
-    <ProjectReference Include="ui\TimeSavers.VS.UI.csproj">
+    <ProjectReference Include="insert-guid\TimeSavers.VS.InsertGuid.csproj">
       <Project>{7d39a2df-7ee6-4ebf-a93c-9625eecdac7b}</Project>
-      <Name>TimeSavers.VS.UI</Name>
+      <Name>TimeSavers.VS.InsertGuid</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

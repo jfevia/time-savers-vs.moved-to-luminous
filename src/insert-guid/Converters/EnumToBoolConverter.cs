@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Windows;
 
-namespace TimeSavers.VS.UI.Converters
+namespace TimeSavers.VS.InsertGuid.Converters
 {
     public class EnumToBoolConverter : ConverterBase
     {
