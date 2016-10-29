@@ -246,3 +246,4 @@ ModelManifest.xml
 
 # Tabs Studio
 *.tss
+**/_*
