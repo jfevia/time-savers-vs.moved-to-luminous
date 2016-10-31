@@ -36,7 +36,7 @@ namespace TimeSavers.VS
     [ProvideOptionPage(typeof(BuildDialogPage), Name, Build, 0, 0, !SupportsAutomation)]
     [ProvideOptionPage(typeof(DeveloperDialogPage), Name, Developer, 0, 0, !SupportsAutomation)]
     [ProvideOptionPage(typeof(VisualStudioDialogPage), Name, VisualStudio, 0, 0, !SupportsAutomation)]
-    [ProvideOptionPage(typeof(SeparatorsDialogPage), Name, VisualStudio, 0, 0, !SupportsAutomation)]
+    [ProvideOptionPage(typeof(SeparatorsDialogPage), Name, Separators, 0, 0, !SupportsAutomation)]
 
     public sealed class PackageClass : PackageBase
     {
