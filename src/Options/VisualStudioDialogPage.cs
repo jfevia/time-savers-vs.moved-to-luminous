@@ -14,34 +14,16 @@ namespace TimeSavers.VS.Options
         //===M
         //===M
 
-        [Category(H1 + VisualStudio + " " + Features)]
-        [DisplayName(VisualStudio + " " + FeaturesEnabled)]
-        [Description("Activity Log, Diagnostice Log, Path Variables, Reopen Start Page")]
+        [Category(H1 + VisualStudioFeatures)]
+        [DisplayName(VisualStudioFeatures + Space + Enabled)]
+        [Description(EnablesDisablesAll + Space + VisualStudioFeatures)]
         public bool VisualStudioCommandsEnabled { get; set; } = true;
 
         //---
 
-        [Category(H2 + VisualStudio + " " + Commands)]
-        [DisplayName("Activity Log Enabled")]
-        [Description("")]
-        [DefaultValue(true)]
-        public bool ActivityLogCommandEnabled { get; set; } = true;
-
-        [Category(H2 + VisualStudio + " " + Commands)]
-        [DisplayName("Diagnostics Log Enabled")]
-        [Description("")]
-        [DefaultValue(true)]
-        public bool DiagnosticLogCommandEnabled { get; set; } = true;
-
-        [Category(H2 + VisualStudio + " " + Commands)]
-        [DisplayName("Path Variables Enabled")]
-        [Description("")]
-        [DefaultValue(true)]
-        public bool PathVariablsCommandEnabled { get; set; } = true;
-
-        [Category(H2 + VisualStudio + " " + Commands)]
-        [DisplayName("Reopen Start Page Enabled")]
-        [Description("")]
+        [Category(H2 + VisualStudioCommands)]
+        [DisplayName(ReopenStartPage + Space + Command + Enabled)]
+        [Description("Enables the '" + ReopenStartPage + "' command")]
         [DefaultValue(true)]
         public bool ReopenStartPageEnabled { get; set; } = true;
 

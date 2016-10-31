@@ -7,6 +7,8 @@ namespace TimeSavers.VS.Options
     using static PackageGuids;
     using static PackageConstants;
 
+    [ClassInterface(ClassInterfaceType.AutoDual)]
+    [ComVisible(true)]
     [Guid(DeveloperDialogPageString)]
     public class DeveloperDialogPage : DialogPage
     {
@@ -14,28 +16,28 @@ namespace TimeSavers.VS.Options
         //===M
         //===M
 
-        [Category(H1 + Developer + " " + Features)]
-        [DisplayName(Developer + " " + FeaturesEnabled)]
-        [Description("Activity Log, Disgnostics Log, Path Variables")]
+        [Category(H1 + DeveloperFeatures)]
+        [DisplayName(DeveloperFeatures + Space + Enabled)]
+        [Description(EnablesDisablesAll + Space + DeveloperFeatures)]
         public bool DeveloperCommandsEnabled { get; set; } = true;
 
         //---
 
-        [Category(H2 + Developer + " " + Commands)]
-        [DisplayName("Activity Log Enabled")]
-        [Description("")]
+        [Category(H2 + DeveloperCommands)]
+        [DisplayName(ActivityLog + Space + Command + Enabled)]
+        [Description("Enables the '" + ActivityLog + "' command")]
         [DefaultValue(true)]
         public bool ActivityLogCommandEnabled { get; set; } = true;
 
-        [Category(H2 + Developer + " " + Commands)]
-        [DisplayName("Diagnostics Log Enabled")]
-        [Description("")]
+        [Category(H2 + DeveloperCommands)]
+        [DisplayName(DiagnosticsLog + Space + Command + Enabled)]
+        [Description("Enables the '" + DiagnosticsLog + "' command")]
         [DefaultValue(true)]
         public bool DiagnosticLogCommandEnabled { get; set; } = true;
 
-        [Category(H2 + Developer + " " + Commands)]
-        [DisplayName("Path Variables Enabled")]
-        [Description("")]
+        [Category(H2 + DeveloperCommands)]
+        [DisplayName(PathVariables + Space + Command + Enabled)]
+        [Description("Enables the '" + PathVariables + "' command")]
         [DefaultValue(true)]
         public bool PathVariablsCommandEnabled { get; set; } = true;
 

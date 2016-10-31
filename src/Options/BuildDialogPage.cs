@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System;
+using System.ComponentModel;
 using System.Runtime.InteropServices;
 using Microsoft.VisualStudio.Shell;
 
@@ -7,6 +8,8 @@ namespace TimeSavers.VS.Options
     using static PackageGuids;
     using static PackageConstants;
 
+    [ClassInterface(ClassInterfaceType.AutoDual)]
+    [ComVisible(true)]
     [Guid(BuildDialogPageString)]
     public class BuildDialogPage : DialogPage
     {
@@ -14,28 +17,28 @@ namespace TimeSavers.VS.Options
         //===M
         //===M
 
-        [Category(H1 + Build + " " + Features)]
-        [DisplayName(Build + " " + FeaturesEnabled)]
-        [Description("Rebuild Solution, Rebuild Project, Cancel Build")]
+        [Category(H1 + BuildFeatures)]
+        [DisplayName(BuildFeatures + Space + Enabled)]
+        [Description(EnablesDisablesAll + Space + BuildFeatures)]
         public bool BuildCommandsEnabled { get; set; } = true;
 
         //---
 
-        [Category(H2 + Build + " " + Commands)]
-        [DisplayName("Rebuild Solution Enabled")]
-        [Description("")]
+        [Category(H2 + BuildCommands)]
+        [DisplayName(RebuildSolution + Space + Command + Space + Enabled)]
+        [Description("Enables the '" + RebuildSolution + "' command")]
         [DefaultValue(true)]
         public bool RebuildSolutionCommandEnabled { get; set; } = true;
 
-        [Category(H2 + Build + " " + Commands)]
-        [DisplayName("Rebuild Project Enabled")]
-        [Description("")]
+        [Category(H2 + BuildCommands)]
+        [DisplayName(RebuildProject + Space + Command + Space + Enabled)]
+        [Description("Enables the '" + RebuildProject + "' command")]
         [DefaultValue(true)]
         public bool RebuildProjectCommandEnabled { get; set; } = true;
 
-        [Category(H2 + Build + " " + Commands)]
-        [DisplayName("Cancel Build Enabled")]
-        [Description("")]
+        [Category(H2 + BuildCommands)]
+        [DisplayName(CancelBuild + Space + Command + Space + Enabled)]
+        [Description("Enables the '" + CancelBuild + "' command")]
         [DefaultValue(true)]
         public bool CancelBuildCommandEnabled { get; set; } = true;
 
