@@ -1,4 +1,5 @@
 ﻿using System.Reflection;
+using System.Runtime.InteropServices;
 using TimeSavers.VS;
 
 [assembly: AssemblyTitle(Vsix.Name)]
@@ -12,3 +13,5 @@ using TimeSavers.VS;
 
 [assembly: AssemblyVersion(Vsix.Version)]
 [assembly: AssemblyFileVersion(Vsix.Version)]
+
+[assembly: ComVisible(false)]
