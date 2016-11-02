@@ -23,7 +23,7 @@ namespace TimeSavers.VS.Options
 
         [Category(H2 + Features)]
         [DisplayName(Enable + Space + ReopenStartPage)]
-        [Description("Reopens the Start Page when you close the solution")]
+        [Description("Automatically reopens the Start Page when you close the solution")]
         [DefaultValue(true)]
         public bool ReopenStartPageEnabled { get; set; } = true;
 

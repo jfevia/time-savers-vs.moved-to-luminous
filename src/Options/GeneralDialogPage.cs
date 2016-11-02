@@ -15,7 +15,7 @@ namespace TimeSavers.VS.Options
         //===M
         //===M
 
-        [Category(H1 + TimeSavers)]
+        [Category(TimeSavers)]
         [DisplayName(Enable + Space + TimeSavers)]
         [Description("Allows the whole set of " + TimeSavers + " features to be turned off together")]
         public bool TimeSaversEnabled { get; set; } = true;
