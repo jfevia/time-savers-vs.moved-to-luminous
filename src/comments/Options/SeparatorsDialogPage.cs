@@ -1,8 +1,9 @@
 ﻿using System.ComponentModel;
+using System.Drawing;
 using System.Runtime.InteropServices;
 using Microsoft.VisualStudio.Shell;
 
-namespace TimeSavers.VS.InsertGuid.Options
+namespace TimeSavers.VS.Comments.Options
 {
     using static PackageGuids;
     using static PackageConstants;
@@ -16,10 +17,29 @@ namespace TimeSavers.VS.InsertGuid.Options
         //===M
         //===M
 
-        [Category(SeparatorsFeature)]
-        [DisplayName(SeparatorsFeature + Space + Enabled)]
-        [Description(EnablesDisables + Space + SeparatorsFeature)]
+        [Category(H1 + SeparatorsFeature)]
+        [DisplayName(Enable + Space + SeparatorsFeature)]
+        [Description("Allows the " + PackageConstants.Separators + " feature to be turned off")]
         public bool SeparatorsCommandsEnabled { get; set; } = true;
+
+        [Category(H2 + Definitions)]
+        [DisplayName(PackageConstants.Separator + Space + Definitions)]
+        [Description("Defines the separator's Name, Matches, Color and Height")]
+        public Separator[] Separators { get; set; } = new Separator[]
+        {
+            new Separator {
+                Name = "Class", Matches = "//***", Color = Color.FromArgb(255, 129, 189, 144), Height = 4
+            },
+            new Separator {
+                Name = "Constructor", Matches = "//!!!", Color = Color.Magenta, Height = 2
+            },
+            new Separator {
+                Name = "Major Method", Matches = "//===", Color = Color.Green, Height = 2
+            } ,
+            new Separator {
+                Name = "Minor Method", Matches = "//---", Color = Color.Blue, Height = 1
+            }
+        };
 
         //***
     }

@@ -71,6 +71,9 @@
     <Compile Include="Commands\Restart\RestartElevatedCommand.cs" />
     <Compile Include="Commands\Restart\RestartNormalCommand.cs" />
     <Compile Include="Events\VsSolutionEvents.cs" />
+    <Compile Include="Options\OptionsDialogPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Options\VisualStudioDialogPage.cs">
       <SubType>Component</SubType>
     </Compile>

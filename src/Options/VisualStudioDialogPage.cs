@@ -14,18 +14,30 @@ namespace TimeSavers.VS.Options
         //===M
         //===M
 
-        [Category(H1 + VisualStudioFeatures)]
-        [DisplayName(VisualStudioFeatures + Space + Enabled)]
-        [Description(EnablesDisablesAll + Space + VisualStudioFeatures)]
+        [Category(H1 + VisualStudioFeatureSet)]
+        [DisplayName(Enable + Space + FeatureSet)]
+        [Description("Allows the whole set of " + VisualStudio + " features to be turned off together")]
         public bool VisualStudioCommandsEnabled { get; set; } = true;
 
         //---
 
-        [Category(H2 + VisualStudioCommands)]
-        [DisplayName(ReopenStartPage + Space + Command + Enabled)]
-        [Description("Enables the '" + ReopenStartPage + "' command")]
+        [Category(H2 + Features)]
+        [DisplayName(Enable + Space + ReopenStartPage)]
+        [Description("Reopens the Start Page when you close the solution")]
         [DefaultValue(true)]
         public bool ReopenStartPageEnabled { get; set; } = true;
+
+        [Category(H2 + Features)]
+        [DisplayName(Enable + Space + RestartVisualStudio)]
+        [Description("Restarts Visual Studio")]
+        [DefaultValue(true)]
+        public bool RestartVisualStudioEnabled { get; set; } = true;
+
+        [Category(H2 + Features)]
+        [DisplayName(Enable + Space + RestartVisualStudioAsAdmin)]
+        [Description("Restarts Visual Studio as administrator")]
+        [DefaultValue(true)]
+        public bool RestartVisualStudioAsAdminEnabled { get; set; } = true;
 
         //---
 

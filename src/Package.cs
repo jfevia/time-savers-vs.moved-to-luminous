@@ -19,6 +19,7 @@ namespace TimeSavers.VS
         public const string DeveloperDialogPageString = "7a9f803b-96de-4d30-b1cd-590443192092";
         public const string VisualStudioDialogPageString = "13c28243-07fb-4034-a035-3a44ff0330aa";
         public const string SeparatorsDialogPageString = "736339a2-2ba5-4e37-9e55-1e72f5ae4721";
+        public const string OptionsDialogPageString = "6bf7c9fa-8e42-4673-83cb-288efe5ae3b5";
         public const string PackageCommandSetString = "4eac4e23-4909-4dac-9d6e-819bdc861480";
         public static Guid Package = new Guid(PackageString);
         public static Guid InsertGuidToolWindow = new Guid(InsertGuidToolWindowString);
@@ -27,6 +28,7 @@ namespace TimeSavers.VS
         public static Guid DeveloperDialogPage = new Guid(DeveloperDialogPageString);
         public static Guid VisualStudioDialogPage = new Guid(VisualStudioDialogPageString);
         public static Guid SeparatorsDialogPage = new Guid(SeparatorsDialogPageString);
+        public static Guid OptionsDialogPage = new Guid(OptionsDialogPageString);
         public static Guid PackageCommandSet = new Guid(PackageCommandSetString);
     }
     /// <summary>

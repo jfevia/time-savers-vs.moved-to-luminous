@@ -17,28 +17,28 @@ namespace TimeSavers.VS.Options
         //===M
         //===M
 
-        [Category(H1 + BuildFeatures)]
-        [DisplayName(BuildFeatures + Space + Enabled)]
-        [Description(EnablesDisablesAll + Space + BuildFeatures)]
+        [Category(H1 + BuildFeatureSet)]
+        [DisplayName(Enable + Space + FeatureSet)]
+        [Description("Allows the whole set of " + Build + " features to be turned off together")]
         public bool BuildCommandsEnabled { get; set; } = true;
 
         //---
 
-        [Category(H2 + BuildCommands)]
-        [DisplayName(RebuildSolution + Space + Command + Space + Enabled)]
-        [Description("Enables the '" + RebuildSolution + "' command")]
+        [Category(H2 + Features)]
+        [DisplayName(Enable + Space + RebuildSolution)]
+        [Description("Rebuilds the current solution")]
         [DefaultValue(true)]
         public bool RebuildSolutionCommandEnabled { get; set; } = true;
 
-        [Category(H2 + BuildCommands)]
-        [DisplayName(RebuildProject + Space + Command + Space + Enabled)]
-        [Description("Enables the '" + RebuildProject + "' command")]
+        [Category(H2 + Features)]
+        [DisplayName(Enable + Space + RebuildProject)]
+        [Description("Rebuilds the current project")]
         [DefaultValue(true)]
         public bool RebuildProjectCommandEnabled { get; set; } = true;
 
-        [Category(H2 + BuildCommands)]
-        [DisplayName(CancelBuild + Space + Command + Space + Enabled)]
-        [Description("Enables the '" + CancelBuild + "' command")]
+        [Category(H2 + Features)]
+        [DisplayName(Enable + Space + CancelBuild)]
+        [Description("Cancels the currently running build/rebuild")]
         [DefaultValue(true)]
         public bool CancelBuildCommandEnabled { get; set; } = true;
 

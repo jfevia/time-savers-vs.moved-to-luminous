@@ -484,6 +484,7 @@
     <GuidSymbol name="DeveloperDialogPage" value="{7A9F803B-96DE-4D30-B1CD-590443192092}" />
     <GuidSymbol name="VisualStudioDialogPage" value="{13C28243-07FB-4034-A035-3A44FF0330AA}" />
     <GuidSymbol name="SeparatorsDialogPage" value="{736339A2-2BA5-4E37-9E55-1E72F5AE4721}" />
+    <GuidSymbol name="OptionsDialogPage" value="{6BF7C9FA-8E42-4673-83CB-288EFE5AE3B5}" />
 
     <GuidSymbol name="PackageCommandSet" value="{4EAC4E23-4909-4DAC-9D6E-819BDC861480}">
       <IDSymbol name="PackageToolbar" value="0xA001" />

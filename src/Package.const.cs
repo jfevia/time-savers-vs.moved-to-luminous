@@ -12,13 +12,16 @@
         public const string Package = "Package";
         public const string VisualStudio = "Visual Studio";
         public const string VS = "VS";
+        public const string Separator = "Separator";
         public const string Separators = "Separators";
         public const string InsertGuid = "Insert Guid";
+        public const string Definitions = "Definitions";
 
         public const string Space = " ";
         public const string H1 = "1." + Space;
         public const string H2 = "2." + Space;
 
+        public const string Enable = "Enable";
         public const string Enabled = "Enabled";
         public const string EnablesDisables = "Enables/disables";
         public const string EnablesDisablesAll = EnablesDisables + Space + "ALL";
@@ -29,25 +32,28 @@
 
         public const string Feature = "Feature";
         public const string Features = "Features";
+        public const string FeatureSet = "Feature Set";
         //public const string FeaturesEnabled = Features + Space + Enabled;
 
         public const string TimeSavers = "Time Savers";
-        public const string TimeSaversFeatures = TimeSavers + Space + Features;
+        public const string TimeSaversFeatureSet = TimeSavers + Space + FeatureSet;
 
-        public const string BuildFeatures = Build + Space + Features;
-        public const string BuildCommands = Build + Space + Commands;
+        public const string IndividualFeatures = "Individual" + Space + Features;
+
+        public const string BuildFeatureSet = Build + Space + FeatureSet;
+        //public const string BuildCommands = Build + Space + Commands;
         public const string RebuildSolution = "Rebuild Solution";
         public const string RebuildProject = "Rebuild Project";
         public const string CancelBuild = "Cancel Build";
 
-        public const string DeveloperFeatures = Developer + Space + Features;
-        public const string DeveloperCommands = Developer + Space + Commands;
+        public const string DeveloperFeatureSet = Developer + Space + FeatureSet;
+        //public const string DeveloperCommands = Developer + Space + Commands;
         public const string ActivityLog = "Activity Log";
         public const string DiagnosticsLog = "Diagnostics Log";
         public const string PathVariables = "Path Variables";
 
-        public const string VisualStudioFeatures = VisualStudio + Space + Features;
-        public const string VisualStudioCommands = VisualStudio + Space + Commands;
+        public const string VisualStudioFeatureSet = VisualStudio + Space + FeatureSet;
+        //public const string VisualStudioCommands = VisualStudio + Space + Commands;
         public const string ReopenStartPage = "Reopen Start Page";
 
         public const string SeparatorsFeature = Separators + Space + Feature;

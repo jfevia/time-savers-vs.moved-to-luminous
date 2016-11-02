@@ -16,28 +16,28 @@ namespace TimeSavers.VS.Options
         //===M
         //===M
 
-        [Category(H1 + DeveloperFeatures)]
-        [DisplayName(DeveloperFeatures + Space + Enabled)]
-        [Description(EnablesDisablesAll + Space + DeveloperFeatures)]
+        [Category(H1 + DeveloperFeatureSet)]
+        [DisplayName(Enable + Space + FeatureSet)]
+        [Description("Allows the whole set of " + Developer + " features to be turned off together")]
         public bool DeveloperCommandsEnabled { get; set; } = true;
 
         //---
 
-        [Category(H2 + DeveloperCommands)]
-        [DisplayName(ActivityLog + Space + Command + Enabled)]
-        [Description("Enables the '" + ActivityLog + "' command")]
+        [Category(H2 + Features)]
+        [DisplayName(Enable + Space + ActivityLog)]
+        [Description("Displays Visual Studio's '" + ActivityLog + "'")]
         [DefaultValue(true)]
         public bool ActivityLogCommandEnabled { get; set; } = true;
 
-        [Category(H2 + DeveloperCommands)]
-        [DisplayName(DiagnosticsLog + Space + Command + Enabled)]
-        [Description("Enables the '" + DiagnosticsLog + "' command")]
+        [Category(H2 + Features)]
+        [DisplayName(Enable + Space + DiagnosticsLog)]
+        [Description("Displays Visual Studio's '" + DiagnosticsLog + "'")]
         [DefaultValue(true)]
         public bool DiagnosticLogCommandEnabled { get; set; } = true;
 
-        [Category(H2 + DeveloperCommands)]
-        [DisplayName(PathVariables + Space + Command + Enabled)]
-        [Description("Enables the '" + PathVariables + "' command")]
+        [Category(H2 + Features)]
+        [DisplayName(Enable + Space + PathVariables)]
+        [Description("Displays the current system '" + PathVariables + "'")]
         [DefaultValue(true)]
         public bool PathVariablsCommandEnabled { get; set; } = true;
 
