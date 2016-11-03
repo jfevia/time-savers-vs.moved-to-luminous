@@ -9,11 +9,19 @@ namespace TimeSavers.VS.Comments.Taggers
 
     internal sealed class SeparatorTagger : RegexTagger<SeparatorTag>
     {
+        //***
+
+        //!!!
+
         internal SeparatorTagger(ITextBuffer buffer) : base(buffer,
             new[] { new Regex(@"^\s*\/\/(\*\*\*|===|---)$", Compiled | CultureInvariant | IgnoreCase) })
         { }
 
+        //!!!
+
         protected override SeparatorTag TryCreateTagForMatch(Match match)
             => new SeparatorTag(match.Groups[0].Value);
+
+        //***
     }
 }

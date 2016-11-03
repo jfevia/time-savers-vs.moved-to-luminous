@@ -18,16 +18,15 @@ namespace TimeSavers.VS.Comments.Taggers
 
         private SeparatorAdornmentTagger(IWpfTextView view, ITagAggregator<SeparatorTag> separatorTagger)
             : base(view, separatorTagger)
-        {
-        }
+        { }
 
         public override void Dispose()
         {
             view.Properties.RemoveProperty(typeof(SeparatorAdornmentTagger));
         }
 
-        protected override SeparatorAdornment CreateAdornment(SeparatorTag separatorTag, SnapshotSpan span)
-            => new SeparatorAdornment(separatorTag, () => OnSpanClick(span));
+        protected override SeparatorAdornment CreateAdornment(SeparatorTag data, SnapshotSpan span)
+            => new SeparatorAdornment(data, () => OnSpanClick(span));
 
         private void OnSpanClick(SnapshotSpan span)
         {
@@ -37,7 +36,7 @@ namespace TimeSavers.VS.Comments.Taggers
 
         protected override bool UpdateAdornment(SeparatorAdornment adornment, SeparatorTag separatorTag)
         {
-            adornment.Update(separatorTag);
+            adornment.Update();
 
             return true;
         }

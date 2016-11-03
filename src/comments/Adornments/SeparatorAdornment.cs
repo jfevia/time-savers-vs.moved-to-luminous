@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.Linq;
 
 namespace TimeSavers.VS.Comments.Adornments
 {
     using YD.Framework.VisualStudio.Packages;
     using Tags;
+    using Options;
 
     using static PackageConstants;
 
@@ -13,26 +15,49 @@ namespace TimeSavers.VS.Comments.Adornments
     {
         private readonly Action _onClick;
 
+        private SeparatorOption[] _separators;
+
+        private static SeparatorsDialogPage _options;
+
+        //***
+
+        private string Value { get; }
+
+
+        public SeparatorsDialogPage Options
+            => _options ?? (_options = PackageBase.GetDialogPage<SeparatorsDialogPage>());
+
+
+        public SeparatorOption[] Separators
+            => _separators ?? (_separators = Options.Separators);
+
+        //!!!
+
         internal SeparatorAdornment(SeparatorTag separatorTag, Action onClick)
         {
-            _onClick = onClick;
-
+            Value = separatorTag.Content.Trim();
             BorderBrush = FrozenBrush(Colors.Transparent);
 
-            Update(separatorTag);
+            _onClick = onClick;
+
+            Update();
         }
+
+        //!!!
 
         protected override void OnClick()
         {
             _onClick();
         }
 
-        internal void Update(SeparatorTag separatorTag)
+        internal void Update()
         {
-            Background = SeparatorBrush(separatorTag);
-            Height = SeparatorHeight(separatorTag);
-            Width = SeparatorWidth(separatorTag);
+            Background = SeparatorBrush();
+            Height = SeparatorHeight();
+            Width = SeparatorWidth();
         }
+
+        //===
 
         private Brush FrozenBrush(Color color)
         {
@@ -43,61 +68,24 @@ namespace TimeSavers.VS.Comments.Adornments
             return brush;
         }
 
-        private Brush SeparatorBrush(SeparatorTag separatorTag)
+        private Brush SeparatorBrush()
         {
-            var content = separatorTag.Content.TrimStart();
+            var separator = Separators.FirstOrDefault(x => x.Matches == Value);
+            var color = separator?.Color ?? Colors.Red;
 
-            if (content.Contains("//***"))
-            {
-                return FrozenBrush(Color.FromArgb(255, 129, 189, 144));
-            }
-
-            if (content.Contains("//==="))
-            {
-                return FrozenBrush(Colors.Green);
-            }
-
-            if (content.Contains("//---"))
-            {
-                return FrozenBrush(Colors.Blue);
-            }
-
-            return FrozenBrush(Colors.Red);
+            return FrozenBrush(color);
         }
 
-        private Color GetColor()
+        private double SeparatorHeight()
         {
-            //getIVSUIShell2
-            var dte = PackageBase.GetDte();
-            if (dte == null) return Colors.White;
+            var separator = Separators.FirstOrDefault(x => x.Matches == Value);
 
-            var prop = dte.Properties[Vsix.Name, InsertGuid].Item("").Value;
-
-            return Colors.Black;
+            return (separator?.Height ?? 0);
         }
 
-        private double SeparatorHeight(SeparatorTag separatorTag)
-        {
-            var content = separatorTag.Content.TrimStart();
-
-            if (content.Contains("//***"))
-            {
-                return 4;
-            }
-
-            if (content.Contains("//==="))
-            {
-                return 2;
-            }
-
-            if (content.Contains("//==="))
-            {
-                return 2;
-            }
-
-            return 1;
-        }
-        private double SeparatorWidth(SeparatorTag separatorTag)
+        private double SeparatorWidth()
             => 200;
+
+        //***
     }
 }

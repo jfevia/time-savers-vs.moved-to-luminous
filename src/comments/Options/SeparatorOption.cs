@@ -1,11 +1,11 @@
 ﻿using System.ComponentModel;
-using System.Drawing;
+using System.Windows.Media;
 
 namespace TimeSavers.VS.Comments.Options
 {
-    public class Separator
+    public class SeparatorOption
     {
-        public string Name { get; set; }
+        public string Description { get; set; }
 
         [Category("Behavior")]
         public string Matches { get; set; }
@@ -14,6 +14,6 @@ namespace TimeSavers.VS.Comments.Options
         public Color Color { get; set; }
 
         [Category("Appearance")]
-        public int Height { get; set; }
+        public double Height { get; set; }
     }
 }
