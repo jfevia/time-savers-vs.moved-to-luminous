@@ -47,6 +47,7 @@
       <Link>source.extension.cs</Link>
     </Compile>
     <Compile Include="Adornments\SeparatorAdornment.cs" />
+    <Compile Include="Extensions\ColorExtensions.cs" />
     <Compile Include="Options\SeparatorOption.cs" />
     <Compile Include="Options\SeparatorsDialogPage.cs">
       <SubType>Component</SubType>

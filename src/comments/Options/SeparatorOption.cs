@@ -1,11 +1,11 @@
 ﻿using System.ComponentModel;
-using System.Windows.Media;
+using System.Drawing;
 
 namespace TimeSavers.VS.Comments.Options
 {
     public class SeparatorOption
     {
-        public string Description { get; set; }
+        public string Name { get; set; }
 
         [Category("Behavior")]
         public string Matches { get; set; }

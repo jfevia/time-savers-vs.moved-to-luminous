@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Drawing;
 using System.Runtime.InteropServices;
 using Microsoft.VisualStudio.Shell;
 
@@ -6,7 +7,6 @@ namespace TimeSavers.VS.Comments.Options
 {
     using static PackageGuids;
     using static PackageConstants;
-    using System.Windows.Media;
 
     [ClassInterface(ClassInterfaceType.AutoDual)]
     [ComVisible(true)]
@@ -28,16 +28,16 @@ namespace TimeSavers.VS.Comments.Options
         public SeparatorOption[] Separators { get; set; } = new SeparatorOption[]
         {
             new SeparatorOption {
-                Description = "Class", Matches = "//***", Color = Color.FromArgb(255, 129, 189, 144), Height = 4
+                Name = "Class", Matches = "//***", Color = Color.FromArgb(255, 129, 189, 144), Height = 4
             },
             new SeparatorOption {
-                Description = "Constructor", Matches = "//!!!", Color = Colors.Magenta, Height = 2
+                Name = "Constructor", Matches = "//!!!", Color = Color.Magenta, Height = 2
             },
             new SeparatorOption {
-                Description = "Major Method", Matches = "//===", Color = Colors.Green, Height = 2
+                Name = "Major Method", Matches = "//===", Color = Color.Green, Height = 2
             } ,
             new SeparatorOption {
-                Description = "Minor Method", Matches = "//---", Color = Colors.Blue, Height = 1
+                Name = "Minor Method", Matches = "//---", Color = Color.Blue, Height = 1
             }
         };
 

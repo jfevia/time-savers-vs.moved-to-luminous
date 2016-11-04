@@ -8,6 +8,7 @@ namespace TimeSavers.VS.Comments.Adornments
     using YD.Framework.VisualStudio.Packages;
     using Tags;
     using Options;
+    using Extensions.ColorExtensions;
 
     using static PackageConstants;
 
@@ -15,32 +16,31 @@ namespace TimeSavers.VS.Comments.Adornments
     {
         private readonly Action _onClick;
 
-        private SeparatorOption[] _separators;
+        //private SeparatorOption[] _separators;
 
-        private static SeparatorsDialogPage _options;
+        //private static SeparatorsDialogPage _options;
 
         //***
 
-        private string Value { get; }
+        //private string Value { get; }
 
+        //private SeparatorsDialogPage Options
+        //    => _options ?? (_options = PackageBase.GetDialogPage<SeparatorsDialogPage>());
 
-        public SeparatorsDialogPage Options
-            => _options ?? (_options = PackageBase.GetDialogPage<SeparatorsDialogPage>());
+        //private SeparatorOption[] Separators
+        //    => _separators ?? (_separators = Options.Separators);
 
-
-        public SeparatorOption[] Separators
-            => _separators ?? (_separators = Options.Separators);
+        //private SeparatorOption Separator { get; }
 
         //!!!
 
         internal SeparatorAdornment(SeparatorTag separatorTag, Action onClick)
         {
-            Value = separatorTag.Content.Trim();
             BorderBrush = FrozenBrush(Colors.Transparent);
 
             _onClick = onClick;
 
-            Update();
+            Update(separatorTag);
         }
 
         //!!!
@@ -50,11 +50,16 @@ namespace TimeSavers.VS.Comments.Adornments
             _onClick();
         }
 
-        internal void Update()
+        internal void Update(SeparatorTag separatorTag)
         {
-            Background = SeparatorBrush();
-            Height = SeparatorHeight();
-            Width = SeparatorWidth();
+            var separators = PackageBase.GetDialogPage<SeparatorsDialogPage>().Separators;
+
+            var value = separatorTag.Content.Trim();
+            var separator = separators.FirstOrDefault(x => x.Matches == value);
+
+            Background = FrozenBrush(separator.Color);
+            Height = separator?.Height ?? 0;
+            Width = 200;
         }
 
         //===
@@ -68,23 +73,14 @@ namespace TimeSavers.VS.Comments.Adornments
             return brush;
         }
 
-        private Brush SeparatorBrush()
+        private Brush FrozenBrush(System.Drawing.Color color)
         {
-            var separator = Separators.FirstOrDefault(x => x.Matches == Value);
-            var color = separator?.Color ?? Colors.Red;
+            var brush = color.ToBrush();
 
-            return FrozenBrush(color);
+            brush.Freeze();
+
+            return brush;
         }
-
-        private double SeparatorHeight()
-        {
-            var separator = Separators.FirstOrDefault(x => x.Matches == Value);
-
-            return (separator?.Height ?? 0);
-        }
-
-        private double SeparatorWidth()
-            => 200;
 
         //***
     }

@@ -34,9 +34,9 @@ namespace TimeSavers.VS.Comments.Taggers
             DisableTag(span);
         }
 
-        protected override bool UpdateAdornment(SeparatorAdornment adornment, SeparatorTag separatorTag)
+        protected override bool UpdateAdornment(SeparatorAdornment adornment, SeparatorTag data)
         {
-            adornment.Update();
+            adornment.Update(data);
 
             return true;
         }
