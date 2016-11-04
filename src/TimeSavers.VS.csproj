@@ -252,14 +252,12 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="WindowsBase" />
-    <Reference Include="YD.Framework.Core, Version=0.8.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\YD.Framework.Core.0.8.0\lib\net461\YD.Framework.Core.dll</HintPath>
+    <Reference Include="YD.Framework.Core, Version=0.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\YD.Framework.Core.0.9.0\lib\net461\YD.Framework.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="YD.Framework.VisualStudio, Version=0.8.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\YD.Framework.VisualStudio.0.8.0\lib\net461\YD.Framework.VisualStudio.dll</HintPath>
+    <Reference Include="YD.Framework.VisualStudio, Version=0.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\YD.Framework.VisualStudio.0.9.0\lib\net461\YD.Framework.VisualStudio.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
