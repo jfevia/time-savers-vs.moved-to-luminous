@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.Windows.Shapes;
 using System.Linq;
 
 namespace TimeSavers.VS.Comments.Adornments
@@ -15,30 +16,18 @@ namespace TimeSavers.VS.Comments.Adornments
     internal sealed class SeparatorAdornment : Button
     {
         private readonly Action _onClick;
-
-        //private SeparatorOption[] _separators;
-
-        //private static SeparatorsDialogPage _options;
-
-        //***
-
-        //private string Value { get; }
-
-        //private SeparatorsDialogPage Options
-        //    => _options ?? (_options = PackageBase.GetDialogPage<SeparatorsDialogPage>());
-
-        //private SeparatorOption[] Separators
-        //    => _separators ?? (_separators = Options.Separators);
-
-        //private SeparatorOption Separator { get; }
+        private readonly Rectangle _rect;
 
         //!!!
 
         internal SeparatorAdornment(SeparatorTag separatorTag, Action onClick)
         {
-            BorderBrush = FrozenBrush(Colors.Transparent);
-
             _onClick = onClick;
+            _rect = new Rectangle();
+
+            BorderBrush = FrozenBrush(Colors.Transparent);
+            Background = FrozenBrush(Colors.Transparent);
+            Content = _rect;
 
             Update(separatorTag);
         }
@@ -57,9 +46,9 @@ namespace TimeSavers.VS.Comments.Adornments
             var value = separatorTag.Content.Trim();
             var separator = separators.FirstOrDefault(x => x.Matches == value);
 
-            Background = FrozenBrush(separator.Color);
-            Height = separator?.Height ?? 0;
-            Width = 200;
+            _rect.Fill = FrozenBrush(separator.Color);
+            _rect.Height = separator?.Height ?? 0;
+            _rect.Width = 200;
         }
 
         //===

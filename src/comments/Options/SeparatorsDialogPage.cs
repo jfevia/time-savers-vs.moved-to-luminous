@@ -28,13 +28,13 @@ namespace TimeSavers.VS.Comments.Options
         public SeparatorOption[] Separators { get; set; } = new SeparatorOption[]
         {
             new SeparatorOption {
-                Name = "Class", Matches = "//***", Color = Color.FromArgb(255, 129, 189, 144), Height = 4
+                Name = "Class", Matches = "//***", Color = Color.FromArgb(255, 129, 189, 144), Height = 3
             },
             new SeparatorOption {
                 Name = "Constructor", Matches = "//!!!", Color = Color.Magenta, Height = 2
             },
             new SeparatorOption {
-                Name = "Major Method", Matches = "//===", Color = Color.Green, Height = 2
+                Name = "Major Method", Matches = "//===", Color = Color.LightGreen, Height = 2
             } ,
             new SeparatorOption {
                 Name = "Minor Method", Matches = "//---", Color = Color.Blue, Height = 1

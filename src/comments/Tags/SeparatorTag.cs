@@ -6,7 +6,7 @@ namespace TimeSavers.VS.Comments.Tags
     {
         //***
 
-        public string Content;
+        public string Content { get; }
 
         //!!!
 
