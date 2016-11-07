@@ -83,9 +83,9 @@ namespace TimeSavers.VS.Comments.Taggers
         protected override SeparatorAdornment CreateAdornment(SeparatorTag data, SnapshotSpan span)
             => new SeparatorAdornment(data, () => OnSpanClick(span));
 
-        protected override bool UpdateAdornment(SeparatorAdornment adornment, SeparatorTag dataTag)
+        protected override bool UpdateAdornment(SeparatorAdornment adornment, SeparatorTag data)
         {
-            adornment.Update(dataTag);
+            adornment.Update(data);
             return true;
         }
 

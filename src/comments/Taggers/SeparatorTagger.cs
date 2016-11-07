@@ -38,7 +38,6 @@ namespace TimeSavers.VS.Comments.Taggers
         {
             const string COMMENT_PREFIX = "//";
             const string REGEX_OR = "|";
-            var x = "qasjqisjqisjq";
 
             var separators = PackageBase.GetDialogPage<SeparatorsDialogPage>().Separators;
             var keys = separators
@@ -48,8 +47,8 @@ namespace TimeSavers.VS.Comments.Taggers
                     => current
                         .Append(REGEX_OR)
                         .Append(next))
-                        .ToString()
-                        .TrimPrefix(REGEX_OR);
+                            .ToString()
+                            .TrimPrefix(REGEX_OR);
 
             return $"^\\s*//({keys})$";
         }
