@@ -41,9 +41,10 @@ namespace TimeSavers.VS.Comments.Adornments
 
         internal void Update(SeparatorTag separatorTag)
         {
-            var separators = PackageBase.GetDialogPage<SeparatorsDialogPage>().Separators;
-
             var value = separatorTag.Content.Trim();
+            if (value == "") return;
+
+            var separators = PackageBase.GetDialogPage<SeparatorsDialogPage>().Separators;
             var separator = separators.FirstOrDefault(x => x.Matches == value);
 
             _rect.Fill = FrozenBrush(separator.Color);

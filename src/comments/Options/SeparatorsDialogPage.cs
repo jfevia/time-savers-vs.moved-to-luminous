@@ -23,21 +23,21 @@ namespace TimeSavers.VS.Comments.Options
         public bool SeparatorsCommandsEnabled { get; set; } = true;
 
         [Category(H2 + Definitions)]
-        [DisplayName(PackageConstants.Separator + Space + Definitions)]
+        [DisplayName(Separator + Space + Definitions)]
         [Description("Defines the separator's Name, Matches, Color and Height")]
         public SeparatorOption[] Separators { get; set; } = new SeparatorOption[]
         {
             new SeparatorOption {
-                Name = "Class", Matches = "//***", Color = Color.FromArgb(255, 129, 189, 144), Height = 3
+                Name = "Class Separator", Matches = "//***", Color = Color.FromArgb(255, 129, 189, 144), Height = 2
             },
             new SeparatorOption {
-                Name = "Constructor", Matches = "//!!!", Color = Color.Magenta, Height = 2
+                Name = "Constructor Separator", Matches = "//!!!", Color = Color.Magenta, Height = 1.5
             },
             new SeparatorOption {
-                Name = "Major Method", Matches = "//===", Color = Color.LightGreen, Height = 2
+                Name = "Major Separator", Matches = "//===", Color = Color.LightGreen, Height = 1.5
             } ,
             new SeparatorOption {
-                Name = "Minor Method", Matches = "//---", Color = Color.Blue, Height = 1
+                Name = "Minor Separator", Matches = "//---", Color = Color.LightSeaGreen, Height = 0.5
             }
         };
 
