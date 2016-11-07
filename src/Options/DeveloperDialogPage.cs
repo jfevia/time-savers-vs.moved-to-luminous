@@ -7,6 +7,8 @@ namespace TimeSavers.VS.Options
     using static PackageGuids;
     using static PackageConstants;
 
+    [ClassInterface(ClassInterfaceType.AutoDual)]
+    [ComVisible(true)]
     [Guid(DeveloperDialogPageString)]
     public class DeveloperDialogPage : DialogPage
     {
@@ -14,28 +16,28 @@ namespace TimeSavers.VS.Options
         //===M
         //===M
 
-        [Category(H1 + Developer + " " + Features)]
-        [DisplayName(Developer + " " + FeaturesEnabled)]
-        [Description("Activity Log, Disgnostics Log, Path Variables")]
+        [Category(H1 + DeveloperFeatureSet)]
+        [DisplayName(Enable + Space + FeatureSet)]
+        [Description("Allows the whole set of " + Developer + " features to be turned off together")]
         public bool DeveloperCommandsEnabled { get; set; } = true;
 
         //---
 
-        [Category(H2 + Developer + " " + Commands)]
-        [DisplayName("Activity Log Enabled")]
-        [Description("")]
+        [Category(H2 + Features)]
+        [DisplayName(Enable + Space + ActivityLog)]
+        [Description("Displays Visual Studio's '" + ActivityLog + "'")]
         [DefaultValue(true)]
         public bool ActivityLogCommandEnabled { get; set; } = true;
 
-        [Category(H2 + Developer + " " + Commands)]
-        [DisplayName("Diagnostics Log Enabled")]
-        [Description("")]
+        [Category(H2 + Features)]
+        [DisplayName(Enable + Space + DiagnosticsLog)]
+        [Description("Displays Visual Studio's '" + DiagnosticsLog + "'")]
         [DefaultValue(true)]
         public bool DiagnosticLogCommandEnabled { get; set; } = true;
 
-        [Category(H2 + Developer + " " + Commands)]
-        [DisplayName("Path Variables Enabled")]
-        [Description("")]
+        [Category(H2 + Features)]
+        [DisplayName(Enable + Space + PathVariables)]
+        [Description("Displays the current system '" + PathVariables + "'")]
         [DefaultValue(true)]
         public bool PathVariablsCommandEnabled { get; set; } = true;
 

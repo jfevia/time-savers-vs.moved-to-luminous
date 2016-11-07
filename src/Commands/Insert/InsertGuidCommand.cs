@@ -6,7 +6,7 @@ namespace TimeSavers.VS.Commands.Insert
 {
     using YD.Framework.VisualStudio.Commands;
     using YD.Framework.VisualStudio.Packages;
-    using TimeSavers.VS.UI.ToolWindows.InsertGuid;
+    using InsertGuid.ToolWindows;
 
     internal sealed class InsertGuidCommand : DynamicCommand
     {

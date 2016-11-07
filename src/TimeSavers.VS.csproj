@@ -71,6 +71,9 @@
     <Compile Include="Commands\Restart\RestartElevatedCommand.cs" />
     <Compile Include="Commands\Restart\RestartNormalCommand.cs" />
     <Compile Include="Events\VsSolutionEvents.cs" />
+    <Compile Include="Options\OptionsDialogPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Options\VisualStudioDialogPage.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -139,6 +142,7 @@
       <DependentUpon>source.extension.vsixmanifest</DependentUpon>
       <MergeWithCTO>true</MergeWithCTO>
       <ManifestResourceName>VSPackage</ManifestResourceName>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -248,23 +252,28 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="WindowsBase" />
-    <Reference Include="YD.Framework.Core, Version=0.8.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\YD.Framework.Core.0.8.0\lib\net461\YD.Framework.Core.dll</HintPath>
+    <Reference Include="YD.Framework.Core, Version=0.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\YD.Framework.Core.0.9.0\lib\net461\YD.Framework.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="YD.Framework.VisualStudio, Version=0.8.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\YD.Framework.VisualStudio.0.8.0\lib\net461\YD.Framework.VisualStudio.dll</HintPath>
+    <Reference Include="YD.Framework.VisualStudio, Version=0.9.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\YD.Framework.VisualStudio.0.9.0\lib\net461\YD.Framework.VisualStudio.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="ui\TimeSavers.VS.UI.csproj">
+    <ProjectReference Include="comments\TimeSavers.VS.Comments.csproj">
+      <Project>{C9F58D3D-C53D-4ED5-82A2-F2778D64F98B}</Project>
+      <Name>TimeSavers.VS.Comments</Name>
+      <IncludeOutputGroupsInVSIX>BuiltProjectOutputGroup%3bBuiltProjectOutputGroupDependencies%3bGetCopyToOutputDirectoryItems%3bSatelliteDllsProjectOutputGroup%3b</IncludeOutputGroupsInVSIX>
+      <IncludeOutputGroupsInVSIXLocalOnly>DebugSymbolsProjectOutputGroup%3b</IncludeOutputGroupsInVSIXLocalOnly>
+    </ProjectReference>
+    <ProjectReference Include="insert-guid\TimeSavers.VS.InsertGuid.csproj">
       <Project>{7d39a2df-7ee6-4ebf-a93c-9625eecdac7b}</Project>
-      <Name>TimeSavers.VS.UI</Name>
+      <Name>TimeSavers.VS.InsertGuid</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\VSSDK\Microsoft.VsSDK.targets" Condition="'$(VSToolsPath)' != ''" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
