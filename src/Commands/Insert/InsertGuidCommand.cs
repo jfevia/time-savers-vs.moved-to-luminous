@@ -12,12 +12,12 @@ namespace TimeSavers.VS.Commands.Insert
     {
         //***
 
-        //===M
+        //!!!
 
         private InsertGuidCommand(PackageBase package) : base(package, PackageIds.InsertGuidCommand)
         { }
 
-        //===M
+        //!!!
 
         public static void Instantiate(PackageBase package)
             => Instantiate(new InsertGuidCommand(package));

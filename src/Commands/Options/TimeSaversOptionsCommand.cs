@@ -9,12 +9,12 @@ namespace TimeSavers.VS.Commands.Options
     internal sealed class TimeSaversOptionsCommand : DynamicCommand
     {
         //***
-        //===M
+        //!!!
 
         private TimeSaversOptionsCommand(PackageBase package) : base(package, PackageIds.TimeSaversOptionsCommand)
         { }
 
-        //===M
+        //!!!
 
         public static void Instantiate(PackageBase package)
             => Instantiate(new TimeSaversOptionsCommand(package));

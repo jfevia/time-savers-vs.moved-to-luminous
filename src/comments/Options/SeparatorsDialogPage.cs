@@ -20,7 +20,7 @@ namespace TimeSavers.VS.Comments.Options
         [Category(H1 + SeparatorsFeature)]
         [DisplayName(Enable + Space + SeparatorsFeature)]
         [Description("Allows the " + PackageConstants.Separators + " feature to be turned off")]
-        public bool SeparatorsCommandsEnabled { get; set; } = true;
+        public bool SeparatorsCommandsEnabled { get; set; } = false;
 
         [Category(H2 + Definitions)]
         [DisplayName(Separator + Space + Definitions)]
@@ -28,16 +28,16 @@ namespace TimeSavers.VS.Comments.Options
         public SeparatorOption[] Separators { get; set; } = new SeparatorOption[]
         {
             new SeparatorOption {
-                Name = "Class Separator", Matches = "//***", Color = Color.FromArgb(255, 129, 189, 144), Height = 2
+                Name = "Class Separator", Matches = "//***", Color = Color.FromName("#84C5FB"), Height = 2
             },
             new SeparatorOption {
-                Name = "Constructor Separator", Matches = "//!!!", Color = Color.Magenta, Height = 1.5
+                Name = "Constructor Separator", Matches = "//!!!", Color = Color.FromName("#AE8FE3"), Height = 1.5
             },
             new SeparatorOption {
-                Name = "Major Separator", Matches = "//===", Color = Color.LightGreen, Height = 1.5
+                Name = "Major Separator", Matches = "//===", Color = Color.FromName("#569CD6"), Height = 1.5
             } ,
             new SeparatorOption {
-                Name = "Minor Separator", Matches = "//---", Color = Color.LightSeaGreen, Height = 0.5
+                Name = "Minor Separator", Matches = "//---", Color = Color.FromName("#569CD6"), Height = 0.5
             }
         };
 

@@ -13,14 +13,14 @@ namespace TimeSavers.VS.Events
 
         //***
 
-        //===M
+        //!!!
 
         public VsSolutionEvents(PackageClass package)
         {
             _reopenStartPageEnabed = package.VisualStudioOptions.ReopenStartPageEnabled;
         }
 
-        //===M
+        //!!!
 
         int IVsSolutionEvents.OnAfterCloseSolution(object pUnkReserved)
         {

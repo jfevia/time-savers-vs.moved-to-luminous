@@ -36,7 +36,7 @@ namespace TimeSavers.VS
     [ProvideOptionPage(typeof(BuildDialogPage), Name, Build, 0, 0, !SupportsAutomation)]
     [ProvideOptionPage(typeof(DeveloperDialogPage), Name, Developer, 0, 0, !SupportsAutomation)]
     [ProvideOptionPage(typeof(VisualStudioDialogPage), Name, VisualStudio, 0, 0, !SupportsAutomation)]
-    [ProvideOptionPage(typeof(SeparatorsDialogPage), Name, Separators, 0, 0, !SupportsAutomation)]
+    //[ProvideOptionPage(typeof(SeparatorsDialogPage), Name, Separators, 0, 0, !SupportsAutomation)]
 
     public sealed class PackageClass : PackageBase
     {
@@ -51,12 +51,12 @@ namespace TimeSavers.VS
         public VisualStudioDialogPage VisualStudioOptions
             => _visualStudioOptions ?? (_visualStudioOptions = GetDialogPage(typeof(VisualStudioDialogPage)) as VisualStudioDialogPage);
 
-        //===M
+        //!!!
 
         public PackageClass() : base(PackageCommandSet, Name, Description)
         { }
 
-        //===M
+        //!!!
 
         protected override void Initialize()
         {
@@ -122,6 +122,8 @@ namespace TimeSavers.VS
         {
             InsertGuidCommand.Instantiate(this);
         }
+
+        //---
 
         //TODO: move to framework
         private void AdviseSolutionEvents(IVsSolutionEvents vsSolutionEvents)

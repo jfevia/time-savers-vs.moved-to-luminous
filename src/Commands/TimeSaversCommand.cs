@@ -15,12 +15,12 @@ namespace TimeSavers.VS.Commands
         protected GeneralDialogPage TimeSaversOptions
             => _generalOptions ?? (_generalOptions = Package?.GetDialogPage(typeof(GeneralDialogPage)) as GeneralDialogPage);
 
-        //===M
+        //!!!
 
         protected TimeSaversCommand(PackageBase package, int id) : base(package, id)
         { }
 
-        //===M
+        //!!!
 
         protected override bool CanExecute
             => TimeSaversOptions.TimeSaversEnabled;

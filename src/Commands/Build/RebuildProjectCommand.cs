@@ -8,13 +8,13 @@ namespace TimeSavers.VS.Commands.Build
     internal sealed class RebuildProjectCommand : BuildCommand
     {
         //***
-        //===M
+        //!!!
 
         private RebuildProjectCommand(PackageBase package)
             : base(package, PackageIds.RebuildProjectCommand)
         { }
 
-        //===M
+        //!!!
 
         public static void Instantiate(PackageBase package)
             => Instantiate(new RebuildProjectCommand(package));

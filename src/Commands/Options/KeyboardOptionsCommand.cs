@@ -8,12 +8,12 @@ namespace TimeSavers.VS.Commands.Options
     internal sealed class KeyboardOptionsCommand : DynamicCommand
     {
         //***
-        //===M
+        //!!!
 
         private KeyboardOptionsCommand(PackageBase package) : base(package, PackageIds.KeyboardOptionsCommand)
         { }
 
-        //===M
+        //!!!
 
         public static void Instantiate(PackageBase package)
             => Instantiate(new KeyboardOptionsCommand(package));

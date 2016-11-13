@@ -8,12 +8,12 @@ namespace TimeSavers.VS.Commands.Build
     internal sealed class CancelBuildCommand : BuildCommand
     {
         //***
-        //===M
+        //!!!
 
         private CancelBuildCommand(PackageBase package) : base(package, PackageIds.CancelBuildCommand)
         { }
 
-        //===M
+        //!!!
 
         public static void Instantiate(PackageBase package)
             => Instantiate(new CancelBuildCommand(package));

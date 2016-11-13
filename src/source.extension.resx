@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="110" xml:space="preserve">
-    <value>Visual Studio Time Savers</value>
+    <value>Time Savers</value>
   </data>
   <data name="112" xml:space="preserve">
     <value>A growing collection of small time-savers to enhance day-to-day productivity for developing with Visual Studio.</value>

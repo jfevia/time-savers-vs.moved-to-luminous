@@ -8,10 +8,10 @@ namespace TimeSavers.VS
     static class Vsix
     {
         public const string Id = "049c7ac5-ba44-4a72-b4ee-7be7fb1b0edd";
-        public const string Name = "Visual Studio Time Savers";
+        public const string Name = "Time Savers";
         public const string Description = @"A growing collection of small time-savers to enhance day-to-day productivity for developing with Visual Studio.";
         public const string Language = "en-US";
-        public const string Version = "1.0.2.1";
+        public const string Version = "1.0.3.1";
         public const string Author = "Yann Duran";
         public const string Tags = "time savers, visual studio 2015, productivity, yannduran, yd";
     }

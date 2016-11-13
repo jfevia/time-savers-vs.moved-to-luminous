@@ -9,7 +9,7 @@ namespace TimeSavers.VS.InsertGuid.Controls
     {
         //***
 
-        //===M
+        //!!!
 
         public InsertGuidControl(InsertGuidToolWindow parent)
         {
@@ -18,7 +18,7 @@ namespace TimeSavers.VS.InsertGuid.Controls
             DataContext = new InsertGuidViewModel();
         }
 
-        //===M
+        //!!!
 
         //***
     }
