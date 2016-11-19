@@ -31,6 +31,7 @@ on the official Visual Studio extension gallery.
 ## v1.0.3
 
 **2016-11-08**
+  - [x] Added VS 2017 support
   - [x] Added *Reopen Start Page* (when solution is closed)
   - [x] Renamed extension
       - from *Visual Studio Time Savers*
@@ -70,7 +71,7 @@ on the official Visual Studio extension gallery.
 - [x] Added *Edit Solution*
 - [x] Added *Close Solution*
 - [x] renamed the extension (tried it out, but changed it back)
-  - from *Visual Studio Time Savers*
+  - from *Time Savers*
   - to *VS Time Savers*
 
 ## v0.3.0
@@ -100,4 +101,4 @@ on the official Visual Studio extension gallery.
 - [x] rewrote the foundation of the extension from scratch
 - [x] renamed the extension
   - from *Luminous Essentials for VS* (a closed-source extension)
-  - to *Visual Studio Time Savers* (now an open-source extension)
+  - to *Time Savers* (now an open-source extension)

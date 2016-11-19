@@ -1,4 +1,4 @@
-# Visual Studio Time Savers
+# Time Savers
 
 Each one of this extension's features can be accessed via one or more of the following methods:
 - the *Time Savers* toolbar

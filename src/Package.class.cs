@@ -17,7 +17,7 @@ namespace TimeSavers.VS
     using Commands.ProjectNode;
     using Commands.Developer;
     using InsertGuid.ToolWindows;
-    using Comments.Options;
+    //using Comments.Options;
     using Options;
     using Events;
 
