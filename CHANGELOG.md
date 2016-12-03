@@ -29,7 +29,7 @@ download/test in the
 These are the changes to each version that has been released
 on the official Visual Studio extension gallery.
 
-## v1.0.3
+## v1.1
 
 **2016-11-08**
   - [x] Added *Reopen Start Page* (when solution is closed)
