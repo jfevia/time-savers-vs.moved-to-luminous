@@ -4,6 +4,7 @@ download/test in the
 [CI build](http://vsixgallery.com/extension/049c7ac5-ba44-4a72-b4ee-7be7fb1b0edd/).
 
 ### Next Sprint
+- [ ] Add VS 2017 support
 - [ ] Duplicate Text
 - [ ] Duplicate File
 - [ ] Copy References
@@ -31,7 +32,6 @@ on the official Visual Studio extension gallery.
 ## v1.0.3
 
 **2016-11-08**
-  - [x] Added VS 2017 support
   - [x] Added *Reopen Start Page* (when solution is closed)
   - [x] Renamed extension
       - from *Visual Studio Time Savers*
