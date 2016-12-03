@@ -11,7 +11,7 @@ using TimeSavers.VS;
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
-[assembly: AssemblyVersion(Vsix.Version)]
-[assembly: AssemblyFileVersion(Vsix.Version)]
+//[assembly: AssemblyVersion(Vsix.Version)]
+//[assembly: AssemblyFileVersion(Vsix.Version)]
 
 [assembly: ComVisible(false)]
