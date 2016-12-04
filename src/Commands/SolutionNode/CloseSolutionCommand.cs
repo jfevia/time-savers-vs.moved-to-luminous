@@ -8,12 +8,12 @@ namespace TimeSavers.VS.Commands.SolutionNode
     internal sealed class CloseSolutionCommand : DynamicCommand
     {
         //***
-        //===M
+        //!!!
 
         private CloseSolutionCommand(PackageBase package) : base(package, PackageIds.CloseSolutionCommand)
         { }
 
-        //===M
+        //!!!
 
         public static void Instantiate(PackageBase package)
             => Instantiate(new CloseSolutionCommand(package));

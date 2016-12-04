@@ -13,8 +13,8 @@ namespace TimeSavers.VS.Options
     public class DeveloperDialogPage : DialogPage
     {
         //***
-        //===M
-        //===M
+        //!!!
+        //!!!
 
         [Category(H1 + DeveloperFeatureSet)]
         [DisplayName(Enable + Space + FeatureSet)]

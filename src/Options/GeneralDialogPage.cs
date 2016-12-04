@@ -12,8 +12,8 @@ namespace TimeSavers.VS.Options
     public class GeneralDialogPage : DialogPage
     {
         //***
-        //===M
-        //===M
+        //!!!
+        //!!!
 
         [Category(TimeSavers)]
         [DisplayName(Enable + Space + TimeSavers)]

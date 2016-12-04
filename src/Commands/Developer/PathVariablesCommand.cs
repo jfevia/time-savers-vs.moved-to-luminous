@@ -12,13 +12,13 @@ namespace TimeSavers.VS.Commands.Developer
     internal sealed class PathVariablesCommand : DynamicCommand
     {
         //***
-        //===M
+        //!!!
 
         private PathVariablesCommand(PackageBase package)
             : base(package, PackageIds.PathVariablesCommand)
         { }
 
-        //===M
+        //!!!
 
         public static void Instantiate(PackageBase package)
             => Instantiate(new PathVariablesCommand(package));

@@ -10,12 +10,12 @@
         protected BuildDialogPage BuildOptions
             => ((PackageClass)Package).BuildOptions;
 
-        //===M
+        //!!!
 
         protected BuildCommand(PackageBase package, int id) : base(package, id)
         { }
 
-        //===M
+        //!!!
 
         protected override bool CanExecute
         => (base.CanExecute && BuildOptions.BuildCommandsEnabled);

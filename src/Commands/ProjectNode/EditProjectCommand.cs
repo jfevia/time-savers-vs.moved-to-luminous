@@ -12,12 +12,12 @@ namespace TimeSavers.VS.Commands.ProjectNode
         private static int CommandId
             => PackageIds.EditProjectCommand;
 
-        //===M
+        //!!!
 
         private EditProjectCommand(PackageBase package) : base(package, CommandId)
         { }
 
-        //===M
+        //!!!
 
         public static void Instantiate(PackageBase package)
             => Instantiate(new EditProjectCommand(package));

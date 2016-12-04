@@ -12,6 +12,10 @@ namespace TimeSavers.VS.Options
     [Guid(PackageGuids.OptionsDialogPageString)]
     public class OptionsDialogPage : DialogPage
     {
+        //***
+        //!!!
+        //!!!
+
         [Category(H1 + OptionsFeatureSet)]
         [DisplayName(Enable + Space + FeatureSet)]
         [Description("Allows the whole set of " + Options + " features to be turned on/off together")]
@@ -30,5 +34,7 @@ namespace TimeSavers.VS.Options
         [Description("Displays the Tools | Options | Environment | Keyboard options page")]
         [DefaultValue(true)]
         public bool KeyboardOptionsCommandEnabled { get; set; } = true;
+
+        //***
     }
 }

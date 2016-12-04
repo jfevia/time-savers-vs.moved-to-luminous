@@ -14,8 +14,8 @@ namespace TimeSavers.VS.Options
     public class BuildDialogPage : DialogPage
     {
         //***
-        //===M
-        //===M
+        //!!!
+        //!!!
 
         [Category(H1 + BuildFeatureSet)]
         [DisplayName(Enable + Space + FeatureSet)]

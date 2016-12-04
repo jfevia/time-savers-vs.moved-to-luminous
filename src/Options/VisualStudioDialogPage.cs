@@ -11,8 +11,8 @@ namespace TimeSavers.VS.Options
     public class VisualStudioDialogPage : DialogPage
     {
         //***
-        //===M
-        //===M
+        //!!!
+        //!!!
 
         [Category(H1 + VisualStudioFeatureSet)]
         [DisplayName(Enable + Space + FeatureSet)]
