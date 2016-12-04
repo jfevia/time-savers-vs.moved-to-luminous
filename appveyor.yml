@@ -9,7 +9,7 @@ version: 1.0.{build}
 #  only:
 #  - develop
 
-#install:
+install:
   - ps: (new-object Net.WebClient).DownloadString("https://raw.github.com/madskristensen/ExtensionScripts/master/AppVeyor/vsix.ps1") | iex
 
 #  - ps: Vsix-UpdateBuildVersion
