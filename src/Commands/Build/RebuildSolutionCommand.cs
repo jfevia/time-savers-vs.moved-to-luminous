@@ -8,12 +8,12 @@ namespace TimeSavers.VS.Commands.Build
     internal sealed class RebuildSolutionCommand : BuildCommand
     {
         //***
-        //===M
+        //!!!
 
         private RebuildSolutionCommand(PackageBase package) : base(package, PackageIds.RebuildSolutionCommand)
         { }
 
-        //===M
+        //!!!
 
         public static void Instantiate(PackageBase package)
             => Instantiate(new RebuildSolutionCommand(package));

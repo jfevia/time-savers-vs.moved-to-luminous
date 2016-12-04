@@ -1,4 +1,4 @@
-# Visual Studio Time Savers
+# Time Savers
 
 [![Build status](https://ci.appveyor.com/api/projects/status/la50f40vw7qys7b3?svg=true)](https://ci.appveyor.com/project/YannDuran/time-savers-vs)
 
@@ -61,94 +61,23 @@ A more in-depth description of the features listed below
 including a comparison of the steps required both with and without the extension installed,
 as well as images of the features in action.
 
-- Insert Guid(s)
-- Rebuild Solution
-- Rebuild Project
+- Activity Log
 - Cancel Build
+- Close Solution
+- Diagnostic Log
+- Edit Project
+- Edit Solution
 - Extensions and Updates
+- Insert Guid(s)
+- Keyboard Options
+- Path Variables
+- Rebuild Project
+- Rebuild Solution
+- Reopen Start Page
 - Restart Visual Studio
 - Restart Visual Studio as Administrator
-- Edit Solution
-- Close Solution
-- Edit Project
-- Keyboard Options
-- Activity Log
-- Diagnostics Log
-- Path Variables
 
 ---
-
-#### Insert Guid(s)
-Insert a single guid, or multiple guids directly into your code without the use of any **external** tool.
-
-toolbar | main menu | context menu | shortcut
-:---:   | :---:     | :---:        | :---:
-no      | yes       | yes          | Shift-Alt-I, Shift-Alt-G
-
-#### Rebuild Solution
-A convenient way to rebuild the whole solution.
-
-toolbar | main menu | context menu | shortcut
-:---:   | :---:     | :---:        | :---:
-yes     | yes       | yes          | Ctrl-Alt-0
-
-#### Rebuild Project
-A convenient way to rebuild the just the current project
-(either a selected project, or the project to which the active code document belongs).
-
-toolbar | main menu | context menu | shortcut
-:---:   | :---:     | :---:        | :---:
-yes     | yes       | yes          | Ctrl-Alt-9
-
-#### Cancel Build
-A convenient way to cancel a running build/rebuild.
-
-toolbar | main menu | context menu
-:---:   | :---:     | :---:
-yes     | yes       | yes
-
-#### Extensions and Updates
-A convenient way to open the *Extensions and Updates* dialog.
-
-toolbar | main menu | context menu
-:---:   | :---:     | :---:
-yes     | yes       | yes
-
-#### Restart Visual Studio
-Unlock Visual Studio's built-in ability to restart itself.
-
-toolbar | main menu | context menu
-:---:   | :---:     | :---:
-yes     | yes       | yes
-
-#### Restart Visual Studio as Administrator
-Restart Visual Studio as administrator (elevated session).
-
-toolbar | main menu | context menu
-:---:   | :---:     | :---:
-yes     | yes       | yes
-
-#### Edit Solution
-Open a solution's *.sln* file in an xml editor.
-
-toolbar | main menu | context menu
-:---:   | :---:     | :---:
-yes     | yes       | yes
-
-#### Close Solution
-Close the solution.
-This command is missing from the solution node in Visual Studio for some unknown reason.
-
-toolbar | main menu | context menu | solution node
-:---:   | :---:     | :---:        | :---:
-yes     | yes       | yes          | yes
-
-#### Edit Project
-Open a project's *csproj* file in an xml editor.
-
-toolbar | main menu | context menu | project node
-:---:   | :---:     | :---:        | :---:
-yes     | yes       | yes          | yes
 
 #### Activity Log
 Open the Visual Studio activity monitor log.
@@ -168,6 +97,21 @@ toolbar | main menu | context menu
 :---:   | :---:     | :---:
 yes     | yes       | yes
 
+#### Cancel Build
+A convenient way to cancel a running build/rebuild.
+
+toolbar | main menu | context menu
+:---:   | :---:     | :---:
+yes     | yes       | yes
+
+#### Close Solution
+Close the solution.
+This command is missing from the solution node in Visual Studio for some unknown reason.
+
+toolbar | main menu | context menu | solution node
+:---:   | :---:     | :---:        | :---:
+yes     | yes       | yes          | yes
+
 #### Diagnostic Log
 Open the most recent MSBuild diagnostic log file.
 
@@ -180,8 +124,79 @@ toolbar | main menu | context menu
 :---:   | :---:     | :---:
 yes     | yes       | yes
 
+#### Edit Project
+Open a project's *csproj* file in an xml editor.
+
+toolbar | main menu | context menu | project node
+:---:   | :---:     | :---:        | :---:
+yes     | yes       | yes          | yes
+
+#### Edit Solution
+Open a solution's *.sln* file in an xml editor.
+
+toolbar | main menu | context menu
+:---:   | :---:     | :---:
+yes     | yes       | yes
+
+#### Extensions and Updates
+A convenient way to open the *Extensions and Updates* dialog.
+
+toolbar | main menu | context menu
+:---:   | :---:     | :---:
+yes     | yes       | yes
+
+#### Insert Guid(s)
+Insert a single guid, or multiple guids directly into your code without the use of any **external** tool.
+
+toolbar | main menu | context menu | shortcut
+:---:   | :---:     | :---:        | :---:
+no      | yes       | yes          | Shift-Alt-I, Shift-Alt-G
+
+#### Keyboard Options
+Open the *Tools* | *Options* dialog at the *Environment* | *Keyboard* node.
+
+toolbar | main menu | context menu
+:---:   | :---:     | :---:
+yes     | yes       | yes
+
 #### Path Variables
 Display the current set of Windows paths variable values.
+
+toolbar | main menu | context menu
+:---:   | :---:     | :---:
+yes     | yes       | yes
+
+#### Rebuild Project
+A convenient way to rebuild the just the current project
+(either a selected project, or the project to which the active code document belongs).
+
+toolbar | main menu | context menu | shortcut
+:---:   | :---:     | :---:        | :---:
+yes     | yes       | yes          | Ctrl-Alt-9
+
+#### Rebuild Solution
+A convenient way to rebuild the whole solution.
+
+toolbar | main menu | context menu | shortcut
+:---:   | :---:     | :---:        | :---:
+yes     | yes       | yes          | Ctrl-Alt-0
+
+#### Reopen Start Page
+Automatically reopen the *Start Page* when the solution is closed.
+
+toolbar | main menu | context menu
+:---:   | :---:     | :---:
+no      | no        | no
+
+#### Restart Visual Studio
+Unlock Visual Studio's built-in ability to restart itself.
+
+toolbar | main menu | context menu
+:---:   | :---:     | :---:
+yes     | yes       | yes
+
+#### Restart Visual Studio as Administrator
+Restart Visual Studio as administrator (elevated session).
 
 toolbar | main menu | context menu
 :---:   | :---:     | :---:
@@ -196,13 +211,6 @@ yes     | yes       | yes
 
 #### Time Savers Options
 Open the *Tools* | *Options* dialog at the *Environment* | *Time Savers* node.
-
-toolbar | main menu | context menu
-:---:   | :---:     | :---:
-yes     | yes       | yes
-
-#### Keyboard Options
-Open the *Tools* | *Options* dialog at the *Environment* | *Keyboard* node.
 
 toolbar | main menu | context menu
 :---:   | :---:     | :---:

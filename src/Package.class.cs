@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 using Microsoft.VisualStudio.Shell;
+using Microsoft.VisualStudio.Shell.Interop;
 
 using static Microsoft.VisualStudio.Shell.Interop.UIContextGuids80;
 
@@ -15,7 +16,10 @@ namespace TimeSavers.VS
     using Commands.SolutionNode;
     using Commands.ProjectNode;
     using Commands.Developer;
+    using InsertGuid.ToolWindows;
+    //using Comments.Options;
     using Options;
+    using Events;
 
     using static PackageConstants;
     using static PackageGuids;
@@ -26,21 +30,33 @@ namespace TimeSavers.VS
 
     [ProvideAutoLoad(NoSolution)]
     [ProvideAutoLoad(SolutionExists)]
+    [ProvideToolWindow(typeof(InsertGuidToolWindow))]
 
     [ProvideOptionPage(typeof(GeneralDialogPage), Name, General, 0, 0, !SupportsAutomation)]
     [ProvideOptionPage(typeof(BuildDialogPage), Name, Build, 0, 0, !SupportsAutomation)]
     [ProvideOptionPage(typeof(DeveloperDialogPage), Name, Developer, 0, 0, !SupportsAutomation)]
     [ProvideOptionPage(typeof(VisualStudioDialogPage), Name, VisualStudio, 0, 0, !SupportsAutomation)]
+    //[ProvideOptionPage(typeof(SeparatorsDialogPage), Name, Separators, 0, 0, !SupportsAutomation)]
 
     public sealed class PackageClass : PackageBase
     {
+        private BuildDialogPage _buildOptions;
+        private VisualStudioDialogPage _visualStudioOptions;
+
         //***
-        //===M
+
+        public BuildDialogPage BuildOptions
+            => _buildOptions ?? (_buildOptions = GetDialogPage(typeof(BuildDialogPage)) as BuildDialogPage);
+
+        public VisualStudioDialogPage VisualStudioOptions
+            => _visualStudioOptions ?? (_visualStudioOptions = GetDialogPage(typeof(VisualStudioDialogPage)) as VisualStudioDialogPage);
+
+        //!!!
 
         public PackageClass() : base(PackageCommandSet, Name, Description)
         { }
 
-        //===M
+        //!!!
 
         protected override void Initialize()
         {
@@ -54,6 +70,8 @@ namespace TimeSavers.VS
             InstantiateOptionsCommands();
             InstantiateSolutionCommands();
             InstantiateProjectCommands();
+
+            AdviseSolutionEvents(new VsSolutionEvents(this));
         }
 
         //===
@@ -103,6 +121,17 @@ namespace TimeSavers.VS
         private void InstantiateInsertCommands()
         {
             InsertGuidCommand.Instantiate(this);
+        }
+
+        //---
+
+        //TODO: move to framework
+        private void AdviseSolutionEvents(IVsSolutionEvents vsSolutionEvents)
+        {
+            uint solutionEventsCookie;
+            var vsSolution = GetGlobalService<SVsSolution, IVsSolution>();
+
+            vsSolution.AdviseSolutionEvents(vsSolutionEvents, out solutionEventsCookie);
         }
 
         //***

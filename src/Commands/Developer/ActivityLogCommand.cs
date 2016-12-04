@@ -14,13 +14,13 @@ namespace TimeSavers.VS.Commands.Developer
         private string Path
             => $"{Package.UserDataPath}\\ActivityLog.xml";
 
-        //===M
+        //!!!
 
         private ActivityLogCommand(PackageBase package)
             : base(package, PackageIds.ActivityLogCommand)
         { }
 
-        //===M
+        //!!!
 
         public static void Instantiate(PackageBase package)
             => Instantiate(new ActivityLogCommand(package));

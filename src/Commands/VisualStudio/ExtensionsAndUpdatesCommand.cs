@@ -8,12 +8,12 @@ namespace TimeSavers.VS.Commands.VisualStudio
     internal sealed class ExtensionsAndUpdatesCommand : DynamicCommand
     {
         //***
-        //===M
+        //!!!
 
         private ExtensionsAndUpdatesCommand(PackageBase package) : base(package, PackageIds.ExtensionsAndUpdatesCommand)
         { }
 
-        //===M
+        //!!!
 
         public static void Instantiate(PackageBase package)
             => Instantiate(new ExtensionsAndUpdatesCommand(package));

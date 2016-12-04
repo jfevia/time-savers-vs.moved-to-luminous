@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="049c7ac5-ba44-4a72-b4ee-7be7fb1b0edd" Version="1.0.2" Language="en-US" Publisher="Yann Duran" />
-    <DisplayName>Visual Studio Time Savers</DisplayName>
+    <Identity Id="049c7ac5-ba44-4a72-b4ee-7be7fb1b0edd" Version="|TimeSavers.VS;GetBuildVersion|" Language="en-US" Publisher="Luminous Software Solutions" />
+    <DisplayName>Time Savers</DisplayName>
     <Description xml:space="preserve">A growing collection of small time-savers to enhance day-to-day productivity for developing with Visual Studio.</Description>
     <MoreInfo>https://visualstudiogallery.msdn.microsoft.com/049c7ac5-ba44-4a72-b4ee-7be7fb1b0edd</MoreInfo>
     <License>Resources\LICENSE</License>
@@ -10,10 +10,10 @@
     <ReleaseNotes>https://github.com/yannduran/time-savers-vs/blob/master/CHANGELOG.md</ReleaseNotes>
     <Icon>Resources\package.ico</Icon>
     <PreviewImage>Resources\preview.png</PreviewImage>
-    <Tags>&gt;visual studio, productivity enhancements, TimeSavers, yannduran, yd</Tags>
+    <Tags>time savers, visual studio 2015, productivity, yannduran, yd</Tags>
   </Metadata>
   <Installation>
-    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0]" />
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0,16.0)" />
   </Installation>
   <Dependencies>
     <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
@@ -22,4 +22,7 @@
   <Assets>
     <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
   </Assets>
+  <Prerequisites>
+    <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0.25904.2,16.0)" DisplayName="Visual Studio core editor" />
+  </Prerequisites>
 </PackageManifest>

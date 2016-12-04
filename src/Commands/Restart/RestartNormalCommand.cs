@@ -8,12 +8,12 @@ namespace TimeSavers.VS.Commands.Restart
     internal sealed class RestartNormalCommand : DynamicCommand
     {
         //***
-        //===M
+        //!!!
 
         private RestartNormalCommand(PackageBase package) : base(package, PackageIds.RestartNormalCommand)
         { }
 
-        //===M
+        //!!!
 
         public static void Instantiate(PackageBase package)
             => Instantiate(new RestartNormalCommand(package));

@@ -6,16 +6,18 @@ namespace TimeSavers.VS.Options
 {
     using static PackageConstants;
 
+    [ClassInterface(ClassInterfaceType.AutoDual)]
+    [ComVisible(true)]
     [Guid(PackageGuids.GeneralDialogPageString)]
     public class GeneralDialogPage : DialogPage
     {
         //***
-        //===M
-        //===M
+        //!!!
+        //!!!
 
-        [Category(Vsix.Name + " " + Features)]
-        [DisplayName(Vsix.Name + " " + Enabled)]
-        [Description("All features for the " + Vsix.Name + " package")]
+        [Category(TimeSavers)]
+        [DisplayName(Enable + Space + TimeSavers)]
+        [Description("Allows the whole set of " + TimeSavers + " features to be turned off together")]
         public bool TimeSaversEnabled { get; set; } = true;
 
         //---

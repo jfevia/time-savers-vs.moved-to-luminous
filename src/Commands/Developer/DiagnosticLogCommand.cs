@@ -20,12 +20,12 @@ namespace TimeSavers.VS.Commands.Developer
         private static int CommandId
             => PackageIds.DiagnosticLogCommand;
 
-        //===M
+        //!!!
 
         private DiagnosticLogCommand(PackageBase package) : base(package, CommandId)
         { }
 
-        //===M
+        //!!!
 
         public static void Instantiate(PackageBase package)
             => Instantiate(new DiagnosticLogCommand(package));

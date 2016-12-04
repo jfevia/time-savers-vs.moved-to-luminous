@@ -470,6 +470,10 @@
   <Symbols>
     <GuidSymbol name="Package" value="{6359DA17-6477-4E9C-8E73-7D05EA8A33A1}" />
 
+    <!--~~~ Tool Windows ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+
+    <GuidSymbol name="InsertGuidToolWindow" value="{776cdc3d-f8f4-4819-8141-cf5938c4cd7d}" />
+
     <!--~~~ Options ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 
     <!--
@@ -479,14 +483,10 @@
     <GuidSymbol name="BuildDialogPage" value="{E967A459-0B9E-4222-BA52-A66496EDAEE3}" />
     <GuidSymbol name="DeveloperDialogPage" value="{7A9F803B-96DE-4D30-B1CD-590443192092}" />
     <GuidSymbol name="VisualStudioDialogPage" value="{13C28243-07FB-4034-A035-3A44FF0330AA}" />
-    <!--
-    <GuidSymbol name="DebugDialogPage" value="{A5FA1E04-1AF1-401A-B190-229CC5389A8D}" />
-    -->
+    <GuidSymbol name="SeparatorsDialogPage" value="{736339A2-2BA5-4E37-9E55-1E72F5AE4721}" />
+    <GuidSymbol name="OptionsDialogPage" value="{6BF7C9FA-8E42-4673-83CB-288EFE5AE3B5}" />
 
     <GuidSymbol name="PackageCommandSet" value="{4EAC4E23-4909-4DAC-9D6E-819BDC861480}">
-      <!-- don't change any of these symbol values-->
-
-      <!--<IDSymbol name="MainMenu" value="0xA000" />-->
       <IDSymbol name="PackageToolbar" value="0xA001" />
       <IDSymbol name="PackageMenu" value="0xA002" />
 
