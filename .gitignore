@@ -249,3 +249,10 @@ ModelManifest.xml
 
 # Folders/files starting with an underscore
 **/_*
+
+# Jekyll
+/Thumbs.db
+/Gemfile
+/Gemfile.lock
+/_site
+/.bundle
