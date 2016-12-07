@@ -78,7 +78,7 @@ test_script:
 #      artifacts configuration
 #---------------------------------#
 
-artifacts:
+#artifacts:
 
 #---------------------------------#
 #     deployment configuration
