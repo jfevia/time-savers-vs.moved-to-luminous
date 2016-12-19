@@ -5,4 +5,4 @@ layout: default
 
 # Release Notes
 
-This is th relase notes text
+This is the release notes text
